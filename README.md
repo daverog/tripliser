@@ -19,7 +19,7 @@ It is designed as an alternative to XSLT conversion, providing the following adv
 
 # Documentation
 
-[User Guide](User Guide)
+[User Guide](https://github.com/daverog/Tripliser/wiki/User-Guide)
 
 ## Example
 
