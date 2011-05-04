@@ -1,0 +1,9 @@
+# SVN Metadata #
+######################
+.svn/
+**/.svn/
+
+# OS generated files #
+######################
+**/.DS_Store?
+Thumbs.db
