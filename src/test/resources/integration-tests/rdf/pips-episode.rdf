@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf      = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs     = "http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl      = "http://www.w3.org/2002/07/owl#"
+         xmlns:foaf     = "http://xmlns.com/foaf/0.1/"
+         xmlns:po       = "http://purl.org/ontology/po/"
+         xmlns:mo       = "http://purl.org/ontology/mo/"
+         xmlns:skos     = "http://www.w3.org/2008/05/skos#"
+         xmlns:time     = "http://www.w3.org/2006/time#"
+         xmlns:dc       = "http://purl.org/dc/elements/1.1/"
+         xmlns:dcterms  = "http://purl.org/dc/terms/"
+         xmlns:wgs84_pos= "http://www.w3.org/2003/01/geo/wgs84_pos#"
+         xmlns:timeline = "http://purl.org/NET/c4dm/timeline.owl#"
+         xmlns:event    = "http://purl.org/NET/c4dm/event.owl#">
+
+<rdf:Description rdf:about="http://www.bbc.co.uk/programmes/b007bpw3.rdf">
+  <rdfs:label>Description of the episode Boots, Boots, Boots</rdfs:label>
+  <foaf:primaryTopic rdf:resource="http://www.bbc.co.uk/programmes/b007bpw3#programme"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.bbc.co.uk/programmes/b007bpw3#programme">
+  <rdf:type rdf:resource="http://purl.org/ontology/po/Episode"/>
+
+  <po:pid>b007bpw3</po:pid>
+  <dc:title>Boots, Boots, Boots</dc:title>
+  <po:short_synopsis>The men are instructed in the three Fs.</po:short_synopsis>
+  <po:medium_synopsis>Classic sitcom about the Home Guard unit of Walmington-on-Sea. The men are instructed in the three Fs.</po:medium_synopsis>
+  <po:long_synopsis>Classic sitcom about the Home Guard unit of Walmington-on-Sea. 
+
+The men are instructed in the three Fs. The most important item in the infantryman's equipment is his feet, and Captain Mainwaring is determined that all of his men will be well shod with hardy battle-worthy feet. To this end, he starts a foot-hardening programme.</po:long_synopsis>
+
+  <po:masterbrand rdf:resource="http://www.bbc.co.uk/programmes/bbctwo#service"/>
+
+  <po:position rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</po:position>
+
+  
+
+  <po:person rdf:resource="http://www.bbc.co.uk/programmes/people/arthur_lowe#person" />
+  <po:person rdf:resource="http://www.bbc.co.uk/programmes/people/bill_pertwee#person" />
+  <po:person rdf:resource="http://www.bbc.co.uk/programmes/people/clive_dunn#person" />
+  <po:person rdf:resource="http://www.bbc.co.uk/programmes/people/ian_lavender#person" />
+  <po:person rdf:resource="http://www.bbc.co.uk/programmes/people/john_laurie#person" />
+  <po:person rdf:resource="http://www.bbc.co.uk/programmes/people/john_le_mesurier#person" />
+  
+  
+    <po:person rdf:resource="http://www.bbc.co.uk/programmes/people/janet_davies#person"/>
+    <po:person rdf:resource="http://www.bbc.co.uk/programmes/people/james_beck#person"/>
+    <po:person rdf:resource="http://www.bbc.co.uk/programmes/people/david_croft#person"/>
+    <po:person rdf:resource="http://www.bbc.co.uk/programmes/people/erik_chitty#person"/>
+    <po:person rdf:resource="http://www.bbc.co.uk/programmes/people/jimmy_perry#person"/>
+    <po:person rdf:resource="http://www.bbc.co.uk/programmes/people/arnold_ridley#person"/>
+
+
+    <po:version rdf:resource="http://www.bbc.co.uk/programmes/b0001zfc#programme" />
+	<po:series rdf:resource="http://www.bbc.co.uk/programmes/b00k2px1#programme"/>
+	<po:brand rdf:resource="http://www.bbc.co.uk/programmes/b007tlxv#programme"/>
+
+</rdf:Description>
+
+</rdf:RDF>

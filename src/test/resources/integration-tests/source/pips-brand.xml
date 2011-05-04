@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<?xml-stylesheet type="text/xsl" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/xsl/pips.xsl"?> 
+<pips xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips" xmlns:pips-meta="http://ns.webservices.bbc.co.uk/2006/02/pips-meta" xmlns:xsd="http://www.w3.org/2001/XMLSchema-datatypes" release="86.4"> 
+  <brand revision="2" embargoed="false" pid="b007tlxv" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/brand/pid.b007tlxv/" last_modified="2010-07-15T11:37:40" last_modified_supplier="rbm"> 
+    <crid uri="crid://bbc.co.uk/b/7227614"/> 
+    <ids> 
+      <id type="crid" authority="bds">crid://bbc.co.uk/b/7227614</id> 
+      <id type="pid" authority="pips">b007tlxv</id> 
+    </ids> 
+    <master_brand> 
+      <link mid="bbc_two" rel="pips-meta:master_brand" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/master_brand/mid.bbc_two/"/> 
+    </master_brand> 
+    <title>Dad's Army</title> 
+    <synopses> 
+      <synopsis length="short">Sitcom about the Home Guard during the Second World War</synopsis> 
+      <synopsis length="medium">Sitcom about the Home Guard during the Second World War</synopsis> 
+    </synopses> 
+    <genres> 
+      <genre_group genre_id="C00196" revision="1" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/genre/genre_id.C00196/" last_modified="2009-03-27T15:28:27" type="iplayer_composite" last_modified_supplier="pips"> 
+        <genre genre_id="100011" type="iplayer_toplevel">Comedy</genre> 
+        <genre genre_id="200010" type="iplayer_secondlevel">Sitcoms</genre> 
+      </genre_group> 
+    </genres> 
+    <formats/> 
+    <classifications/> 
+    <filename_template/> 
+    <links> 
+      <link rel="pips-meta:broadcast-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/brand/pid.b007tlxv/broadcasts/"/> 
+      <link rel="pips-meta:availability_trigger-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/brand/pid.b007tlxv/availability_triggers/"/> 
+      <link rel="pips-meta:mixed-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/brand/pid.b007tlxv/descendants/"/> 
+      <link rel="pips-meta:series-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/brand/pid.b007tlxv/children/series/"/> 
+      <link rel="pips-meta:episode-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/brand/pid.b007tlxv/children/episodes/"/> 
+      <link rel="pips-meta:clip-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/brand/pid.b007tlxv/children/clips/"/> 
+      <link rel="pips-meta:episode-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/brand/pid.b007tlxv/descendants/episodes/"/> 
+      <link rel="pips-meta:clip-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/brand/pid.b007tlxv/descendants/clips/"/> 
+      <link rel="pips-meta:membership-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/brand/pid.b007tlxv/member_in/"/> 
+      <link rel="pips-meta:related_link-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/brand/pid.b007tlxv/related_links/"/> 
+      <link rel="pips-meta:promotion-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/brand/pid.b007tlxv/promotions/"/> 
+      <link rel="pips-meta:tagging-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/brand/pid.b007tlxv/taggings/"/> 
+      <link rel="pips-meta:relationship-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/brand/pid.b007tlxv/relationships/"/> 
+      <link rel="pips-meta:contribution-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/brand/pid.b007tlxv/contributions/"/> 
+      <link rel="pips-meta:change-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/brand/pid.b007tlxv/changes/"/> 
+    </links> 
+  </brand> 
+</pips>

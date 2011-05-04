@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf-mapping>
+	<namespaces>
+		<namespace prefix="atom" url="http://www.w3.org/2005/Atom" default="true" />
+		<namespace prefix="foaf" url="http://xmlns.com/foaf/0.1/" />
+		<namespace prefix="bio" url="http://purl.org/vocab/bio/0.1/" />
+		<namespace prefix="dcterms" url="http://purl.org/dc/terms/" />
+		<namespace prefix="science" url="http://www.bbc.co.uk/science/0.1/" />
+	</namespaces>
+	<graph query="//entry/content">
+		<resource query="scientist">
+			<about prepend="http://www.bbc.co.uk/iSite" append="#scientist" query="../../id" />
+			<properties>
+				<property name="rdf:type" resource="true" value="science:Scientist" />
+				<property name="dcterms:issued" query="../../published" />
+				<property name="dcterms:modified" query="../../updated" />
+				<property name="foaf:name" query="name" />
+				<property name="foaf:img" query="img/@src" />
+				<property name="bio:biography" query="synopsis" />
+				<property name="science:hasStudied" prepend="http://dbpedia.org/resource/" resource="true" required="false" query="subjects/subject" />
+			</properties>
+		</resource>
+	</graph>
+</rdf-mapping>

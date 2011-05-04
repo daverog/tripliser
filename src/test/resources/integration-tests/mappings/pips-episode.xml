@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf-mapping>
+	<constants>
+ 		<constant name="bbcProgrammesUrl" value="http://www.bbc.co.uk/programmes/"/>
+ 	</constants>
+	<namespaces>
+	    <namespace prefix="pips" url="http://ns.webservices.bbc.co.uk/2006/02/pips" default="true"/>
+	    <namespace prefix="xsd" url="http://www.w3.org/2001/XMLSchema#"/>
+	    <namespace prefix="rdfs" url="http://www.w3.org/2000/01/rdf-schema#"/>
+		<namespace prefix="foaf" url="http://xmlns.com/foaf/0.1/"/>
+	    <namespace prefix="po" url="http://purl.org/ontology/po/"/>
+	    <namespace prefix="mo" url="http://purl.org/ontology/mo/"/>
+	    <namespace prefix="skos" url="http://www.w3.org/2008/05/skos#"/>
+	    <namespace prefix="time" url="http://www.w3.org/2006/time#"/>
+	    <namespace prefix="dc" url="http://purl.org/dc/elements/1.1/"/>
+	    <namespace prefix="dcterms" url="http://purl.org/dc/terms/"/>
+	    <namespace prefix="wgs84_pos" url="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+	    <namespace prefix="timeline" url="http://purl.org/NET/c4dm/timeline.owl#"/>
+	    <namespace prefix="event" url="http://purl.org/NET/c4dm/event.owl#"/>
+  	</namespaces>
+  	<graph query="//pips/episode">
+	  	<resource comment="Mapping for the RDF document">
+			<about prepend="${bbcProgrammesUrl}" append=".rdf" query="@pid"/>
+			<properties>
+				<property name="rdfs:label" prepend="Description of the episode " query="title"/>
+				<property name="foaf:primaryTopic" resource="true" prepend="${bbcProgrammesUrl}" append="#programme" query="@pid"/>
+			</properties>
+	  	</resource>
+	  	<resource comment="Mapping for the episode">
+			<about prepend="${bbcProgrammesUrl}" append="#programme" query="@pid"/>
+			<properties>
+				<property name="rdf:type" resource="true" value="po:Episode"/>
+				<property name="po:pid" query="@pid"/>
+				<property name="dc:title" query="title"/>
+				<property name="po:short_synopsis" query="synopses/synopsis[@length='short']"/>
+				<property name="po:medium_synopsis" query="synopses/synopsis[@length='medium']"/>
+				<property name="po:long_synopsis" query="synopses/synopsis[@length='long']"/>
+				<property name="po:masterbrand" resource="true" prepend="${bbcProgrammesUrl}" append="#service" query="translate(master_brand/link/@mid, '_', '')"/>
+				<property name="po:position" dataType="xsd:int" query="member_of/link/@index"/>
+				<!--<property name="po:genre" resource="true" prepend="${bbcProgrammesUrl}genres/" append="#genre" validationRegex=".+/.+" query="lower-case(concat(genres/genre_group/genre[@type='iplayer_toplevel'],'/',genres/genre_group/genre[@type='iplayer_secondlevel']))" input="version"/>-->
+				<!--<property name="po:genre" alternative="true" resource="true" prepend="${bbcProgrammesUrl}genres/" append="#genre" validationRegex=".+/.+" query="lower-case(concat(//pips/series/genres/genre_group/genre[@type='iplayer_toplevel'],'/',//pips/series/genres/genre_group/genre[@type='iplayer_secondlevel']))" input="series" />
+				<property name="po:genre" alternative="true" resource="true" prepend="${bbcProgrammesUrl}genres/" append="#genre" validationRegex=".+/.+" query="lower-case(concat(//pips/brand/genres/genre_group/genre[@type='iplayer_toplevel'],'/',//pips/series/genres/genre_group/genre[@type='iplayer_secondlevel']))" input="brand" />
+				--><property name="po:person" input="version" resource="true" prepend="${bbcProgrammesUrl}people/" query="//pips/version/credits/credit/alias/given_name/lower-case(concat(translate(text(), ' ', '_'),'_',../family_name/translate(text(), ' ', '_')))" append="#person" required="false"/>
+				<property name="po:version" input="version" resource="true" prepend="${bbcProgrammesUrl}" query="//pips/version/@pid" append="#programme"/>
+				<property name="po:series" resource="true" prepend="${bbcProgrammesUrl}" query="member_of/link/@pid" append="#programme"/>
+				<property name="po:brand" resource="true" prepend="${bbcProgrammesUrl}" query="member_of_brand/link/@pid" append="#programme"/>
+			</properties>
+	  	</resource>
+  	</graph>
+</rdf-mapping>

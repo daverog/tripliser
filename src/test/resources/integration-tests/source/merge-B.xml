@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<food xmlns="http://bbc.co.uk/food/" >
+	<fruit>
+		<apple>
+			<id>7</id>
+			<name>Golden Delicious</name>
+		</apple>
+		<apple>
+			<id>8</id>
+			<name>Granny Smith</name>
+		</apple>
+	</fruit>
+	<vegetables>
+		<potato>
+			<id>9</id>
+			<name>Marfona</name>
+		</potato>
+		<potato>
+			<id>10</id>
+			<name>Nicola</name>
+		</potato>
+		<potato>
+			<id>11</id>
+			<name>Nadine</name>
+		</potato>
+		<potato>
+			<id>12</id>
+			<name>Saxon</name>
+		</potato>
+		<cabbage>
+			<id>13</id>
+			<name>Savoy</name>
+		</cabbage>
+	</vegetables>
+</food>

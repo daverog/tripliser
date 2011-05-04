@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:foaf="http://xmlns.com/foaf/0.1/">
+	<rdf:Description rdf:about="http://bbc.co.uk/thing/1">
+		<foaf:name>First</foaf:name>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://bbc.co.uk/thing/2">
+		<foaf:name>Second</foaf:name>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://bbc.co.uk/thing/3">
+		<foaf:name>Third</foaf:name>
+	</rdf:Description>
+</rdf:RDF>

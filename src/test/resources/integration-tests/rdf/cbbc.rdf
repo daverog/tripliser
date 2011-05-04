@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:bio="http://purl.org/vocab/bio/0.1/">
+	<rdf:Description rdf:about="http://www.bbc.co.uk/iSite/electron/atom/v1/cbbc/brand/tracybeaker.xml#brand">
+		<rdf:type rdf:resource="https://confluence.dev.bbc.co.uk/display/cbbcrebuild/SchemasCBBCBrand"/>
+		<foaf:name>thestoryoftracybeaker</foaf:name>
+		<bio:biography>Drama about a young girl growing up in a childrens' home
+		</bio:biography>
+	</rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf      = "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs     = "http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl      = "http://www.w3.org/2002/07/owl#"
+         xmlns:foaf     = "http://xmlns.com/foaf/0.1/"
+         xmlns:po       = "http://purl.org/ontology/po/"
+         xmlns:mo       = "http://purl.org/ontology/mo/"
+         xmlns:skos     = "http://www.w3.org/2008/05/skos#"
+         xmlns:time     = "http://www.w3.org/2006/time#"
+         xmlns:dc       = "http://purl.org/dc/elements/1.1/"
+         xmlns:dcterms  = "http://purl.org/dc/terms/"
+         xmlns:wgs84_pos= "http://www.w3.org/2003/01/geo/wgs84_pos#"
+         xmlns:timeline = "http://purl.org/NET/c4dm/timeline.owl#"
+         xmlns:event    = "http://purl.org/NET/c4dm/event.owl#">
+
+<rdf:Description rdf:about="/programmes/b007bpw3.rdf">
+  <rdfs:label>Description of the episode Boots, Boots, Boots</rdfs:label>
+  <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-11-26T03:01:09Z</dcterms:created>
+  <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-11-26T03:01:09Z</dcterms:modified>
+  <foaf:primaryTopic rdf:resource="/programmes/b007bpw3#programme"/>
+</rdf:Description>
+
+<po:Episode rdf:about="/programmes/b007bpw3#programme">
+
+  <po:pid>b007bpw3</po:pid>
+  <dc:title>Boots, Boots, Boots</dc:title>
+  <po:short_synopsis>The men are instructed in the three Fs.</po:short_synopsis>
+  <po:medium_synopsis>Classic sitcom about the Home Guard unit of Walmington-on-Sea. The men are instructed in the three Fs.</po:medium_synopsis>
+  <po:long_synopsis>Classic sitcom about the Home Guard unit of Walmington-on-Sea. 
+
+The men are instructed in the three Fs. The most important item in the infantryman&#39;s equipment is his feet, and Captain Mainwaring is determined that all of his men will be well shod with hardy battle-worthy feet. To this end, he starts a foot-hardening programme.</po:long_synopsis>
+
+  
+
+
+  <po:masterbrand rdf:resource="/bbctwo#service"/>
+
+  <po:position rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</po:position>
+
+  <po:genre rdf:resource="/programmes/genres/comedy/sitcoms#genre" />
+
+
+  <po:subject rdf:resource="/programmes/subjects/home_guard#subject" />
+
+  <po:person rdf:resource="/programmes/people/arthur_lowe#person" />
+  <po:person rdf:resource="/programmes/people/bill_pertwee#person" />
+  <po:person rdf:resource="/programmes/people/clive_dunn#person" />
+  <po:person rdf:resource="/programmes/people/ian_lavender#person" />
+  <po:person rdf:resource="/programmes/people/john_laurie#person" />
+  <po:person rdf:resource="/programmes/people/john_le_mesurier#person" />
+
+
+  <po:version rdf:resource="/programmes/b0001zfc#programme" />
+
+
+</po:Episode>
+
+<po:Series rdf:about="/programmes/b00k2px1#programme">
+  <po:episode rdf:resource="/programmes/b007bpw3#programme"/>
+</po:Series>
+
+
+
+<po:Brand rdf:about="/programmes/b007tlxv#programme">
+  <po:episode rdf:resource="/programmes/b007bpw3#programme"/>
+</po:Brand>
+
+
+</rdf:RDF>
