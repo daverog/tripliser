@@ -1,0 +1,226 @@
+<html>
+	<head>
+		<title>Tripliser</title>
+		<link type="text/css" rel="stylesheet" href="css/tripliser.css"></link>
+		<meta name="keywords" content="xml2rdf, xmltordf, GRDDL"/>
+	</head>
+	<body>
+		<h1>Tripliser</h1>
+
+		<p>
+			Tripliser is a Java library and command-line tool for creating triple graphs from XML.
+			It is particularly suitable for data exhibiting any of the following characteristics:
+			<ul>
+				<li><strong>Messy</strong> - missing data, badly formatted data, changeable structure)</li>
+				<li><strong>Bulky</strong> - large volumes</li>
+				<li><strong>Volatile</strong> - ongoing changes to data and structure, e.g. feeds</li>
+			</ul>
+			<i>Other non-RDF source data may be supported in future such as CSV and SQL databases.</i>
+		</p>
+
+		<p>
+			It is designed as an alternative to XSLT conversion, providing the following advantages:
+			<ul>
+				<li><strong>Easy-to-read mapping format</strong> - concisely describing each mapping</li>
+				<li><strong>Robust</strong> - error or partial failure tolerant</li>
+				<li><strong>Detailed reporting</strong> - comprehensive feedback on the successes and failures of the conversion process</li>
+				<li><strong>Extensible</strong> - custom functions, flexible API</li>
+				<li><strong>Efficient</strong> - facilities for processing data in large volumes with minimal memory usage</li>
+			</ul>
+		</p>
+
+		<p class="big">
+			&gt; <a href="user-guide.html">User Guide</a>
+		</p>
+
+		<p>
+			As an introductory explanation of how tripliser works, here is a practical example.
+		</p>
+	<div class="section">
+		<h2>Example</h2>
+
+		<h3>Premise</h3>
+
+		<p>
+			You have an XML file containing data, which you wish to express in RDF:
+		</p>
+
+		<p><em>Source XML file (universe.xml)</em></p>
+
+		<textarea name="code" class="xml:nogutter" cols="60">
+			<?xml version="1.0" encoding="UTF-8"?>
+			<universe-objects>
+				<stars>
+					<star id="sun">
+						<name>Sun</name>
+						<spectralClass>G2V</spectralClass>
+					</star>
+				</stars>
+				<planets>
+					<planet id="jupiter">
+						<name>Jupiter</name>
+						<adjective>Jovian</adjective>
+						<satellites>63</satellites>
+					</planet>
+				</planets>
+			</universe-objects>
+		</textarea>
+	</div>
+	<div class="section">
+		<h3>Solution</h3>
+
+		<p>
+			The following mapping file is created to convert the data. (Do not worry about every detail, as this
+			example is used elsewhere in the documentation where each part is explained).
+		</p>
+
+		<p><em>Mapping file (universe-mapping.xml)</em></p>
+
+		<textarea name="code" class="xml:nogutter" cols="60">
+			<?xml version="1.0" encoding="UTF-8"?>
+			<rdf-mapping xmlns="http://www.daverog.org/rdf-mapping" strict="false">
+				<constants>
+					<constant name="objectsUri" value="http://objects.theuniverse.org/" />
+				</constants>
+				<namespaces>
+					<namespace prefix="xsd" url="http://www.w3.org/2001/XMLSchema#" />
+					<namespace prefix="rdfs" url="http://www.w3.org/2000/01/rdf-schema#" />
+					<namespace prefix="dc" url="http://purl.org/dc/elements/1.1/" />
+					<namespace prefix="universe" url="http://theuniverse.org/" />
+				</namespaces>
+				<graph query="//universe-objects" name="universe-objects" comment="A graph for objects in the universe">
+					<resource query="stars/star">
+						<about prepend="${objectsUri}" append="#star" query="@id" />
+						<properties>
+							<property name="rdf:type" resource="true" value="universe:Star"/>
+							<property name="dc:title" query="name" />
+							<property name="universe:id" query="@id" />
+							<property name="universe:spectralClass" query="spectralClass" />
+						</properties>
+					</resource>
+					<resource query="planets/planet">
+						<about prepend="${objectsUri}" append="#planet" query="@id" />
+						<properties>
+							<property name="rdf:type" resource="true" value="universe:Planet"/>
+							<property name="dc:title" query="name" />
+							<property name="universe:id" query="@id" />
+							<property name="universe:adjective" query="adjective" />
+							<property name="universe:numberOfSatellites" dataType="xsd:int" query="satellites" />
+						</properties>
+					</resource>
+				</graph>
+			</rdf-mapping>
+		</textarea>
+
+		<p>
+			The following command is run:
+		</p>
+
+		<pre>triplise universe.xml universe-mapping.xml</pre>
+
+		<p>
+			This produces the following RDF file:
+		</p>
+
+		<p><em>RDF output (universe.xml.rdf)</em></p>
+
+		<textarea name="code" class="xml:nogutter" cols="60">
+			<?xml version="1.0" encoding="UTF-8"?>
+			<rdf:RDF
+			    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			    xmlns:dc="http://purl.org/dc/elements/1.1/"
+			    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+			    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+			    xmlns:universe="http://theuniverse.org/" >
+			  <rdf:Description rdf:about="http://objects.theuniverse.org/sun#star">
+			    <rdf:type rdf:resource="http://theuniverse.org/Star"/>
+			    <dc:title>Sun</dc:title>
+			    <universe:id>sun</universe:id>
+			    <universe:spectralClass>G2V</universe:spectralClass>
+			  </rdf:Description>
+			  <rdf:Description rdf:about="http://objects.theuniverse.org/jupiter#planet">
+			    <rdf:type rdf:resource="http://theuniverse.org/Planet"/>
+			    <dc:title>Jupiter</dc:title>
+			    <universe:id>jupiter</universe:id>
+			    <universe:adjective>Jovian</universe:adjective>
+			    <universe:numberOfSatellites rdf:datatype="http://www.w3.org/2001/XMLSchema#int">63</universe:numberOfSatellites>
+			  </rdf:Description>
+			</rdf:RDF>
+		</textarea>
+
+		<p>
+			That's all there is to it.
+		</p>
+	</div>
+	<div class="section">
+		<h2>In Java</h2>
+
+		<p>
+			To do the same as above, but in Java, you'll need to run the following code:
+		</p>
+
+		<textarea name="code" class="java:nogutter" cols="60">
+			import org.daverog.tripliser.TripliserFactory;
+
+			...
+
+			TripliserFactory
+				.create(mappingXmlInputStream)
+				.setInputStream(inputFileInputStream)
+				.writeRdf(rdfOutputStream);
+		</textarea>
+	</div>
+	<div class="section">
+		<h2>Credits</h2>
+
+		<p>
+			Tripliser was designed and developed by David Rogers with assistance from
+			Rija Menage.
+		</p>
+
+		<p class="mini">d <em>dot</em> p <em>dot</em> rogers <em>at</em> gmail <em>dot</em> com</p>
+
+		<p>
+			Made available by kind permission of the British Broadcasting Corporation.
+		</p>
+	</div>
+	<div class="section">
+		<h2>License</h2>
+
+		<p>
+			Copyright (C) 2010, 2011 by David Rogers
+		</p>
+		<p>
+			Permission is hereby granted, free of charge, to any person obtaining a copy
+			of this software and associated documentation files (the "Software"), to deal
+			in the Software without restriction, including without limitation the rights
+			to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+			copies of the Software, and to permit persons to whom the Software is
+			furnished to do so, subject to the following conditions:
+		</p>
+		<p>
+			The above copyright notice and this permission notice shall be included in
+			all copies or substantial portions of the Software.
+		</p>
+		<p>
+			THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+			IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+			FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+			AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+			LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+			OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+			THE SOFTWARE.
+		</p>
+	</div>
+
+		<!-- Syntax highlighter configuration -->
+
+		<link type="text/css" rel="stylesheet" href="css/SyntaxHighlighter.css"></link>
+		<script language="javascript" src="js/shCore.js"></script>
+		<script language="javascript" src="js/shBrushXml.js"></script>
+		<script language="javascript" src="js/shBrushJava.js"></script>
+		<script language="javascript">
+		dp.SyntaxHighlighter.HighlightAll('code');
+		</script>
+	</body>
+</html>

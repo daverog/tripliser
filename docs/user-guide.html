@@ -1,0 +1,894 @@
+<html>
+<head>
+	<title>Tripliser User Guide</title>
+	<link type="text/css" rel="stylesheet" href="css/tripliser.css"></link>
+	<meta name="keywords" content="xml2rdf, xmltordf, GRDDL"/>
+</head>
+<body>
+	<h1>Tripliser User Guide</h1>
+	<p class="big">
+		&lt; <a href="index.html">Back to Homepage</a>
+	</p>
+	<div class="section">
+		<h2>Contents</h2>
+		<ul>
+			<li><a href="#model">Basic model</a></li>
+			<li><a href="#concepts">Concepts</a>
+				<ul>
+					<li><a href="#mimetypes">Mime types</a></li>
+					<li><a href="#primaryinputs">Primary inputs</a></li>
+					<li><a href="#supportinginputs">Supporting inputs</a></li>
+					<li><a href="#reportconcept">Report</a></li>
+					<li><a href="#funcconcept">Functions</a></li>
+				</ul>
+			</li>
+			<li><a href="#complete">Complete Model</a></li>
+			<li><a href="#cli">Command line tool</a>
+				<ul>
+					<li><a href="#install">Installation</a>
+						<ul>
+							<li><a href="#clisource">From Source</a></li>
+							<li><a href="#clidownload">Download Jar</a></li>
+						</ul>
+					</li>
+					<li><a href="#usage">Usage</a></li>
+				</ul>
+			</li>
+			<li><a href="#java">Java</a>
+				<ul>
+					<li><a href="#usage">Usage</a></li>
+					<li><a href="#functions">Supplying functions</a></li>
+					<li><a href="#triplegraphs">TripleGraphs</a>
+						<ul>
+							<li><a href="#scope">Scope &amp; Merging</a></li>
+						</ul>
+					</li>
+					<li><a href="#triplegraphcollections">TripleGraphCollections</a></li>
+					<li><a href="#iteratevscollection">Iteration vs. Collection</a></li>
+				</ul>
+			</li>
+			<li><a href="#mapping">Mapping file</a>
+				<ul>
+					<li><a href="#constants">Constants</a></li>
+					<li><a href="#namespaces">Namespaces</a></li>
+					<li><a href="#graphs">Graphs, Resources &amp; Properties</a></li>
+					<li><a href="#props">Property Mappings</a></li>
+					<li><a href="#tags">Tags</a></li>
+					<li><a href="#strict">Strict mapping</a></li>
+				</ul>
+			</li>
+			<li><a href="#reports">Reports</a>
+				<ul>
+					<li><a href="#reportexample">Examples</a></li>
+					<li><a href="#statuses">Statues</a></li>
+				</ul>
+			</li>
+			<li><a href="#xpath">XPath query language</a>
+				<ul>
+					<li><a href="#nodeinherit">Context Node Inheritance</a></li>
+					<li><a href="#resetcontext">Resetting Context</a></li>
+					<li><a href="#xpathfunc">Saxon XPath Function Definitions</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="section">
+		<a name="model"/>
+		<h2>Basic model</h2>
+
+		<p>Tripliser uses the XML mapping file to convert inputs to outputs. The inputs could be in various forms, but most typically are XML files. The output is one or more 'triple graphs', or a serialisation of the graph(s).</p>
+
+		<img src="images/tripliser.png" width="608px" height="329px"/>
+	</div>
+	<div class="section">
+		<a name="concepts"/>
+		<h2>Concepts</h2>
+		<a name="mimetypes"/>
+		<h3>Mime types</h3>
+
+		<p>
+			Tripliser can produce all mime-types supported by the Jena library:
+		</p>
+
+		<table>
+			<tr><td class="strong">N3</td><td>text/rdf+n3</td></tr>
+			<tr><td class="strong">X-Turtle</td><td>application/x-turtle</td></tr>
+			<tr><td class="strong">Plain text</td><td>text/plain</td></tr>
+			<tr><td class="strong">RDF XML</td><td>application/rdf+xml</td></tr>
+			<tr><td class="strong">RDF XML Abbreiviated*</td><td>application/rdf+xml+abbr</td></tr>
+		</table>
+
+		<p>
+			<em>*A non-standard mime-type used to produce abbreviated RDF XML</em>
+		</p>
+		<a name="primaryinputs"/>
+		<h3>Primary inputs</h3>
+
+		<p>
+			Primary inputs are the principal source of the data used to construct the output. Primary inputs are often referred to as simply 'inputs', where <em>primary</em> input is used only to contract with <em>supporting</em> input.
+		</p>
+		<a name="supportinginputs"/>
+		<h3>Supporting inputs</h3>
+
+		<p>
+			Supporting inputs provide a way of supplying additional reference data to a conversion process.
+			Supporting inputs must be of the same form as the input data. These inputs are provided as a map,
+			allowing them to be specifically referenced in the mapping file using the <span class="mono">input</span> attribute
+		</p>
+		<a name="reportconcept"/>
+		<h3>Reports</h3>
+
+		<p>
+			Tripliser produces at least one report for every conversion. Reports contain details about the
+			conversion process and an assessment as to whether it was successful.
+		</p>
+		<a name="funcconcept"/>
+		<h3>Functions</h3>
+
+		<p>
+			Functions can be provided to the conversion process to allow more advanced querying, such as lookups to
+			third-party services, data type conversion or advanced validation.
+		</p>
+	</div>
+	<div class="section">
+		<a name="complete"/>
+		<h2>Complete model</h2>
+		<img src="images/tripliser-advanced.png" width="608px" height="329px"/>
+	</div>
+	<div class="section">
+		<a name="cli"/>
+		<h2>Command line tool</h2>
+
+		<p>The command line tool gives access to the key functionality of the Java library.</p>
+	</div>
+	<div class="section">
+		<a name="install"/>
+		<h3>Installation</h3>
+
+		<p>TODO: Once uploaded to github</p>
+	</div>
+	<div class="section">
+		<a name="clisource"/>
+		<h4>From source</h3>
+
+		<ol>
+			<li><em>Git instructions here</em></li>
+			<li><span class="mono">cd [source directory]</span></li>
+			<li><span class="mono">mvn assembly:assembly -DdescriptorId=jar-with-dependencies</span></li>
+			<li><span class="mono">cp src/main/sh/triplise [installation directory]</span></li>
+			<li><span class="mono">cp target/tripliser-1.0-jar-with-dependencies.jar  [installation directory]</span></li>
+			<li><span class="mono">cd [installation directory]</span></li>
+			<li><span class="mono">triplise [input] [mapping]</span></li>
+		</ol>
+	</div>
+	<div class="section">
+		<a name="clidownload"/>
+		<h4>Download Jar</h4>
+
+		<ol>
+			<li><span class="mono">wget ???TODO???</span></li>
+			<li><span class="mono">wget ???TODO???</span></li>
+			<li><span class="mono">triplise [input] [mapping]</span></li>
+		</ol>
+	</div>
+	<div class="section">
+		<a name="usage"/>
+		<h3>Usage</h3>
+
+		<p>
+			<span class="mono">triplise [input] [mapping]</span>
+		</p>
+
+		<p>
+			Where <span class="mono">input</span> is the input file and <span class="mono">mapping</span> is the mapping XML file. Unless specified, the output will use
+			the input filename and apply a '.rdf' extension.
+		</p>
+
+		<p>
+			The tool provides usage help which will explain the available options. To show the usage help, call the tool with no arguments.
+		</p>
+
+		<p>
+			Here is a sample usage message:
+		</p>
+
+		<textarea name="code" class="xml:nogutter:nocontrols" cols="60">usage: input mapping [-m <mimetype>] [-o <filename>] [-r <filename>] [-s
+       <inputs>] [-x <filename>]
+ -m,--mime-type <mimetype>         The mime-type to use for the output
+                                   (text/rdf+n3, application/x-turtle,
+                                   text/plain, application/rdf+xml+abbr,
+                                   application/rdf+xml
+ -o,--output <filename>            A filename for the output. Default
+                                   applies '.rdf' extension to input
+ -r,--report <filename>            A filename for the report, hides the
+                                   stdout report output
+ -s,--supporting-inputs <inputs>   A comma-separated list of supporting
+                                   input references, in the format
+                                   'id:inputRef', e.g.
+                                   'id1:input1,id2:input2'. The mapping
+                                   will determine the format of the input,
+                                   where the default is XML files
+ -x,--xml-report <filename>        A filename for the XML report, hides
+                                   the stdout report output</textarea>
+
+	</div>
+	<div class="section">
+		<a name="java"/>
+		<h2>Java</h2>
+
+		<p>Tripliser is principally designed as a Java library. As such, the functionality is richer than simply using the command line tool. </p>
+	</div>
+	<div class="section">
+		<a name="javausage"/>
+		<h3>Usage</h3>
+
+		<p>
+			To get started, a <span class="mono">TripliserFactory</span> is needed. A <span class="mono">TripliserFactory</span> requires a mapping file, as an <span class="mono">InputStream</span>.
+			The resulting <span class="mono">Tripliser</span> can be used to process different inputs in different configurations. Both the factory and the <span class="mono">Tripliser</span>
+			use a builder pattern to provide a clean syntax.
+		</p>
+
+		<p>
+			The following is the simplest possible usage of the Tripliser library:
+		</p>
+
+		<textarea name="code" class="java:nogutter" cols="60">
+			import org.daverog.tripliser.TripliserFactory;
+
+			...
+
+			TripliserFactory
+				.create(mappingXmlInputStream)
+				.setInputStream(inputFileInputStream)
+				.writeRdf(rdfOutputStream);
+		</textarea>
+
+		<p>
+			Using the builder pattern, more options can be applied:
+		</p>
+
+		<textarea name="code" class="java:nogutter" cols="60">
+			TripliserFactory
+				.addFunctions(functions)
+				.setSupportingInputs(supportingDocuments)
+				.setMergeScope(Scope.INPUT)
+				.setMimeType(Constants.MIME_TYPE_APPLICATION_X_TURTLE)
+				.setInputIterator(inputIterator)
+				.generateTripleGraphCollection()
+				.iterator();
+		</textarea>
+
+		<p>
+			For further details on each builder method, please consult the javadoc.</p>
+		</p>
+
+	</div>
+	<div class="section">
+		<a name="functions"/>
+		<h3>Supplying functions</h3>
+
+		<p>When using the Java library, functions can be supplied to enhance the query language. Currently, only Saxon XPath functions can be added. See the <a href="#xpathfunc">Saxon XPath Function Definitions</a> section</p>
+	</div>
+	<div class="section">
+		<a name="triplegraphs"/>
+		<h3>TripleGraphs</h3>
+
+		<p>
+			<span class="mono">TripleGraph</span>s can be produced by Tripliser, and are the encapsulation of a triple graph and associated meta-data. They comprise the following:
+			<ul>
+				<li>A name</li>
+				<li>A Jena model, containing the actual graph data</li>
+				<li>A report, detailing issues with the conversion</li>
+				<li>Tags, providing additional meta-data</li>
+			</ul>
+		</p>
+	</div>
+	<div class="section">
+		<a name="scope"/>
+		<h4>Scope &amp; Merging</h4>
+
+		<p>Tripliser uses the concept of scope in various areas. The various scopes are defined as follows, broadly speaking, from the widest to the narrowest:</p>
+
+		<ul>
+			<li><strong class="mono">MAPPING</strong>: The whole mapping file</li>
+			<li><strong class="mono">INPUT</strong>: Each primary input (not supporting) supplied to the tripliser</li>
+			<li><strong class="mono">GRAPH_MAPPING</strong>: Each <span class="mono">graph</span> element in the mapping file</li>
+			<li><strong class="mono">GRAPH</strong> <strong>(default)</strong>: Each query result for each <span class="mono">graph</span> element in the mapping file</li>
+			<li><strong class="mono">RESOURCE_MAPPING</strong>: Each <span class="mono">resource</span> element in the mapping file</li>
+			<li><strong class="mono">RESOURCE</strong>: Each query result for each <span class="mono">resource</span> element in the mapping file</li>
+			<li><strong class="mono">PROPERTY</strong>: Each query result for each <span class="mono">property</span> element in the mapping file</li>
+		</ul>
+
+		<p>
+			Scopes are provided to the <span class="mono">setMergeScope(scope)</span> method. This determines how the graphs are merged during the conversion process. For example, if a merge scope of
+			<span class="mono">RESOURCE_MAPPING</span> was specified, a graph would be produce for each <span class="mono">resource</span> element in the mapping file. In the universe example, we
+			would produce one graph full of stars, and one graph full of planets, regardless of the input(s).
+		</p>
+
+	</div>
+	<div class="section">
+		<a name="triplegraphcollections"/>
+		<h3>TripleGraphCollections</h3>
+
+		<p>
+			<span class="mono">TripleGraphCollection</span>s are the produced by the <span class="mono">Tripliser.generateTripleGraphCollection()</span>. In addition to providing an iteration over the
+			triple graphs in the collection, the collection also contains a report of its own. This report records entries that are not specific to any particular graph, such as an error reading
+			an input.
+		</p>
+
+		<p>
+			Triple graphs can also be obtained by name, from the collection (if this is appropriate to the chosen <a href="#scope">merge scope</a>).
+		</p>
+	</div>
+	<div class="section">
+		<a name="iteratevscollection"/>
+		<h3>Iteration vs. Collection</h3>
+
+		<p>
+			There are two approaches to obtaining multiple triple graphs. One is to create a <span class="mono">TripleGraphCollection</span> with
+			the <span class="mono">generateTripleGraphCollection</span> method, the other is to create a <span class="mono">TripleGraphIterator</span> with
+			the <span class="mono">getTripleGraphIterator</span> method.
+		</p>
+
+		<p>
+			Using <span class="mono">getTripleGraphIterator</span> is much more likely to be efficient as data is processed and stored only when necessary.
+			The efficiency gain will depend on various factors, particularly the merge scope, but the following example illustrates the difference.
+		</p>
+
+		<p>
+			Assuming the following:
+			<ul>
+				<li>A mapping file with one <span class="mono">graph</span> element</li>
+				<li>100 input files</li>
+				<li>100 'instances' of a graph per input file (e.g. the graph XPath query returns 100 results for each input file)</li>
+			</ul>
+		</p>
+
+		<p>
+			Using the collection approach, 10,000 graphs will be added to a collection, each containing a report.
+		</p>
+
+		<p>
+			Using the iteration approach, one of each of the 10,000 graphs will be return at a time. At any one time, only one input file
+			will be open and only one triple graph and one report will be in memory.
+		</p>
+	</div>
+	<div class="section">
+		<a name="mapping"/>
+		<h2>Mapping file</h2>
+
+		<p>The mapping file describes how an particular format of input should be converted into triples. This is done using queries, which 'extract' the values from the input and 'inject' them into a graph. Below is an example mapping file:</p>
+
+		<textarea name="code" class="xml:nogutter" cols="60">
+			<?xml version="1.0" encoding="UTF-8"?>
+			<rdf-mapping xmlns="http://www.daverog.org/rdf-mapping" strict="false">
+				<constants>
+					<constant name="objectsUri" value="http://objects.theuniverse.org/" />
+				</constants>
+				<namespaces>
+					<namespace prefix="xsd" url="http://www.w3.org/2001/XMLSchema#" />
+					<namespace prefix="rdfs" url="http://www.w3.org/2000/01/rdf-schema#" />
+					<namespace prefix="dc" url="http://purl.org/dc/elements/1.1/" />
+					<namespace prefix="universe" url="http://theuniverse.org/" />
+				</namespaces>
+				<graph query="//universe-objects" name="universe-objects" comment="A graph for objects in the universe">
+					<resource query="stars/star">
+						<about prepend="${objectsUri}" append="#star" query="@id" />
+						<properties>
+							<property name="rdf:type" resource="true" value="universe:Star"/>
+							<property name="dc:title" query="name" />
+							<property name="universe:id" query="@id" />
+							<property name="universe:spectralClass" query="spectralClass" />
+						</properties>
+					</resource>
+					<resource query="planets/planet">
+						<about prepend="${objectsUri}" append="#planet" query="@id" />
+						<properties>
+							<property name="rdf:type" resource="true" value="universe:Planet"/>
+							<property name="dc:title" query="name" />
+							<property name="universe:id" query="@id" />
+							<property name="universe:adjective" query="adjective" />
+							<property name="universe:numberOfSatellites" dataType="xsd:int" query="satellites" />
+						</properties>
+					</resource>
+				</graph>
+			</rdf-mapping>
+		</textarea>
+	</div>
+	<div class="section">
+		<a name="constants"/>
+		<h3>Constants</h3>
+
+		<p>
+			To avoid replication of frequently occurring values throughout the mapping file, constants can be used.
+			They are simple key value pairs, defined as follows:
+		</p>
+
+		<textarea name="code" class="xml:nogutter" cols="60">
+			<constants>
+				<constant name="objectsUri" value="http://objects.theuniverse.org/" />
+			</constants>
+		</textarea>
+
+		<p>
+			The defined constant can then be applied, using <span class="mono">${<em>name</em>}</span> syntax, elsewhere in the mapping file:
+		</p>
+
+		<textarea name="code" class="xml:nogutter" cols="60">
+			<about prepend="${objectsUri}" append="#planet" query="@id" />
+		</textarea>
+
+		<p>
+			Constants can be used inside the following attributes of property mappings (<span class="mono">about</span> or <span class="mono">property</span>):
+			<ul>
+				<li class="mono">prepend</li>
+				<li class="mono">append</li>
+				<li class="mono">value</li>
+			</ul>
+		</p>
+
+	</div>
+	<div class="section">
+		<a name="namespaces"/>
+		<h3>Namespaces</h3>
+
+		<p>
+			Tripliser supports the use of namespace prefixes. Each declared namespace can be used elsewhere in
+			the mapping file. Only namespaces that are used in any particular graph will be declared in resulting
+			RDF serialisations. Namespaces are defined as follows:
+		</p>
+
+		<textarea name="code" class="xml:nogutter" cols="60">
+			<namespaces>
+				<namespace prefix="xsd" url="http://www.w3.org/2001/XMLSchema#" />
+				<namespace prefix="rdfs" url="http://www.w3.org/2000/01/rdf-schema#" />
+				<namespace prefix="dc" url="http://purl.org/dc/elements/1.1/" />
+				<namespace prefix="universe" url="http://theuniverse.org/" />
+			</namespaces>
+		</textarea>
+
+		<p>
+			The defined namespace can then be applied, using <span class="mono">prefix:entity</span> syntax, elsewhere in the mapping file:
+		</p>
+
+		<textarea name="code" class="xml:nogutter" cols="60">
+			<property name="universe:adjective" query="adjective" />
+		</textarea>
+
+		<p>
+			Direct use of namespace prefixes is supported by the following attributes of property mappings (<span class="mono">about</span> or <span class="mono">property</span>):
+			<ul>
+				<li class="mono">name</li>
+				<li class="mono">dataType</li>
+				<li class="mono">value</li>
+			</ul>
+			Namespace prefixes can also be used indirectly, where the results of queries can incorporate the prefix form. For example, the following XPath query would be valid:
+		</p>
+
+		<textarea name="code" class="xml:nogutter:nocontrols" cols="60">
+			query="concat('dc:', @dc_property)"
+		</textarea>
+
+		<p>
+			Where <span class="mono">@dc_property</span> results in a valid Dublin Core property.
+		</p>
+
+		<p>
+			The RDF namespace (http://www.w3.org/1999/02/22-rdf-syntax-ns#), with a prefix of 'rdf', is built-in by default
+		</p>
+
+		<h4>Default namespace</h4>
+
+		<p>
+			The default namespace is extracted from the XML file's <span class="mono">xmlns</span> attribute. A minor performance gain can be achieved by indicating the default namespace in the mapping file as follows:
+		</p>
+
+		<textarea name="code" class="xml:nogutter" cols="60">
+			<namespace prefix="universe" default="true" url="http://theuniverse.org/" />
+		</textarea>
+	</div>
+	<div class="section">
+		<a name="graphs"/>
+		<h3>Graphs, Resources & Properties</h3>
+
+		<p>The most important parts of the mapping file are the graphs, resources and properties, each defined as follows:</p>
+
+		<ul>
+			<li><strong>Graph</strong>: A collection of resources intended to form a single triple graph</li>
+			<li><strong>Resource</strong>: A resource within a graph</li>
+			<li><strong>About</strong>: A special property to define the identity of the resource</li>
+			<li><strong>Property</strong>: A specific property of a resource</li>
+		</ul>
+
+		<p>
+			With the exception of the 'about' property, all the parts described above can also describe <em>multiple</em>
+			things. This is the case when a query is used that returns multiple results, a multi-result-query. For example, if
+			a multi-result-query is used on the graph element, a different graph will be produced for each result.
+			Multiple resources and multiple properties work in the same way. Note that queries are often only <em>potentially</em>
+			multi-result, where the number of results is not known until the input is supplied.
+		</p>
+
+		<h4>Properties common to <span class="mono">graph</span> and <span class="mono">resource</span> elements</h4>
+
+		<p>
+			There are several properties common to <span class="mono">graph</span> and <span class="mono">resource</span> elements. These are as follows:
+		</p>
+
+		<ul>
+			<li><strong class="mono">name</strong>: A name used to identify the graph or resource in reports. Also, if merge scope <span class="mono">GRAPH_MAPPING</span> is used, graphs that have names can be obtained from a
+				<span class="mono">TripleGraphCollection</span> with the method <span class="mono">getTripleGraphByName(&quot;name&quot;)</span></li>
+			<li><strong class="mono">query</strong>: The result(s) of this query are only used as input for the queries at a lower level. For example, XPath queries must return 'nodes' which are then passed as a 'context node' to the resources or properties.</li>
+			<li><strong class="mono">input</strong>: Determines the supporting input on which the query will be run by providing the input's name. If ommited, the query will run on the primary input.</li>
+			<li><strong class="mono">required</strong>: If true, raises the level of the report entry for a missing graph or resource from warning to error. This causes missing graphs or resources to result in a failed mapping. The default is equal to the <span class="mono">strict</span> attribute applied to the root element, which itself defaults to true.</li>
+			<li><strong class="mono">comment</strong>: A comment to describe the graph or resource mapping.</li>
+		</ul>
+	</div>
+	<div class="section">
+		<a name="props"/>
+		<h3>Property mapping</h3>
+
+		<p>
+			There are two forms of property mapping:
+			<ul>
+				<li><strong>The <span class="mono">about</span> element</strong>: This mapping generates the URI of the resource and is therefore manadatory.</li>
+				<li><strong>The <span class="mono">property</span> element</strong>: Top-level properties are placed inside the <span class="mono">properties</span>
+					element and generate the properties of the resource. Properties can be nested to create anonymous resources (blank nodes).
+					Properties that contain nested properties cannot have a <span class="mono">value</span> and must be a resource</li>
+			</ul>
+		</p>
+
+		<p>
+			Property mapping provide the following attributes to configure their behaviour:
+		</p>
+
+		<ul>
+			<li><strong class="mono">prepend</strong>: The object's value or URI will be preprended with this attribute's value. Constants will be converted.</li>
+			<li><strong class="mono">append</strong>: The object's value or URI will be appended with this attribute's value. Constants will be converted.</li>
+			<li><strong class="mono">value</strong>: The object's value or URI will be this attribute's value, with any prepended or appended values applied. Constants will be converted.</li>
+			<li><strong class="mono">query</strong>: The object's value or URI will be the result of the query, with any prepended or appended values applied.</li>
+			<li><strong class="mono">input</strong>: Determines the supporting input on which the query will be run by providing the input's name. If ommited, the query will run on the primary input.</li>
+			<li><strong class="mono">resource</strong>: If true, the final value, created from the attributes above, is expected to be a URI. If false, it is expected to be a string value, unless another data type is supplied. Defaults to false normally, true for properties with nested properties.</li>
+			<li><strong class="mono">dataType</strong>: A datatype URI defining the type of the value. Values for XSD datatypes will be validated. If supplied, property cannot be a resource URI.</li>
+			<li><strong class="mono">validationRegex</strong>: A regular expression (Java-compatible) which is applied after the value or resource URI have been generated. If a match is not found, the property is not added to the graph.</li>
+			<li><strong class="mono">required</strong>: If true, raises the level of the report entry for a missing property mapping from warning to error. This causes missing properties to result in a failed mapping. The default is equal to the <span class="mono">strict</span> attribute applied to the root element, which itself defaults to true.</li>
+			<li><strong class="mono">comment</strong>: A comment to describe the property mapping.</li>
+		</ul>
+
+		<p>
+			None of the attributes above are mandatory, however, a property mapping must satify one of the following conditions:
+			<ul>
+				<li>Has a <span class="mono">value</span> attribute</li>
+				<li>Has a <span class="mono">query</span> attribute</li>
+				<li>Has a nested properties</li>
+			</ul>
+		</p>
+
+	</div>
+	<div class="section">
+		<a name="tags"/>
+		<h3>Tags</h3>
+
+		<p>
+			The purpose of tags is to extract additional meta-data from the input, to allow post-processing of the triple graph.
+			For example, you might extract an ID which is not used in the ontology, but uniquely identifies the resource in
+			other systems.
+		</p>
+		<p>
+			Tags can be applied to graphs as follows:
+		</p>
+
+		<textarea name="code" class="xml:nogutter" cols="60">
+			<graph query="//thing">
+				<tags>
+					<tag name="tag1" query="@id" />
+					<tag name="tag2" query="@extra-meta-data" />
+				</tags>
+				...
+			</graph>
+		</textarea>
+
+		<p>
+			Tag queries will be run when a graph is produced. The results of tag queries, instead of being added as triples, are provided as a simple key-value map, accessible as follows:
+		</p>
+
+		<textarea name="code" class="java:nogutter" cols="60">
+			tripleGraph.getTagValue("tag-name");
+		</textarea>
+
+	</div>
+	<div class="section">
+		<a name="strict"/>
+		<h3>Strict mapping</h3>
+		<p>
+			The <span class="mono">strict</span> attribute applied to the root <span class="mono">rdf-mapping</span> element determines the default
+			of the <span class="mono">required</span> attribute for all property mappings. If a required property fails to result in a new triple on the graph,
+			then this is considered a failure in the report. Therefore, a strict mapping is more likely to fail.
+		</p>
+	</div>
+	<div class="section">
+		<a name="reports"/>
+		<h2>Reports</h2>
+
+		<p>
+			Tripliser produces at least one report for every conversion. Reports contain detail about the
+			conversion process including:
+			<ul>
+				<li>Status (error, warning, advice etc...)</li>
+				<li>Scope (resource, graph, etc...)</li>
+				<li>Property name</li>
+				<li>A parent mapping, if existant</li>
+				<li>Cause (An exception class)</li>
+				<li>Message</li>
+				<li>Query details (from the mapping file)</li>
+			</ul>
+			These reports can be in three forms:
+			<ul>
+				<li><strong>Logging</strong>: A report that logs to stdout</li>
+				<li><strong>Plain text</strong>: A human readable, line by line output of the report</li>
+				<li><strong>XML</strong>: An XML report with each field of the each entry within its own element</li>
+			</ul>
+			The level of detail is the same for all types of report. If using the command line tool, options are
+			available to switch report type. When using the library, a report can by extracted at the end as XML or plain
+			text.
+		</p>
+	</div>
+	<div class="section">
+		<a name="reportexample"/>
+		<h3>Example</h3>
+		<p>The following is an example report, in text and XML format:</p>
+
+		<textarea name="code" class="xml:nogutter" cols="60">
+			<report>
+			   <entry status="warning" scope="property" name="foaf:name" cause="DatatypeFormatException" message="Lexical form &apos;Test Name&apos; is not a legal instance of Datatype[http://www.w3.org/2001/XMLSchema#int -&gt; class java.lang.Integer] Invalid value format" query="name"/>
+			   <entry status="failure" scope="property" name="foaf:name" cause="InvalidPropertyMappingException" message="A required property did not have any triples created" query="name"/>
+			   <entry status="success" scope="resource" name="resource1" query="//simple"/>
+			</report>
+		</textarea>
+
+		<pre>[warning@property|foaf:name] (DatatypeFormatException) Lexical form 'Test Name' is not a legal instance of Datatype[http://www.w3.org/2001/XMLSchema#int -> class java.lang.Integer] Invalid value format {query='name'}
+[failure@property|foaf:name] (InvalidPropertyMappingException) A required property did not have any triples created {query='name'}
+[success@resource|resource1] {query='//simple'}
+-----------------------
+Overall status: failure
+Success: false</pre>
+	</div>
+	<div class="section">
+		<a name="statuses"/>
+		<h3>Statuses</h3>
+
+		<p>
+			Report statuses indicate the successes or failures of a conversion process. The following statuses are used:
+			<ul>
+				<li><strong class="strong">SUCCESS</strong>: A successful conversion was made</li>
+				<li><strong class="strong">ADVICE</strong>: An event of note, but not a problem</li>
+				<li><strong class="strong">WARNING</strong>: An allowable problem with the conversion</li>
+				<li><strong class="strong">FAILURE</strong>: An unacceptable problem with the conversion</li>
+				<li><strong class="strong">ERROR</strong>: A more fundamental error, such as an IO error</li>
+			</ul>
+			Overall status is determined as being equal to the most severe report entry status, where ERROR is the most severe status.
+		</p>
+
+		<p>
+			The status of a given event can vary depending on the configuration of the mapping file. Required properties will result in
+			a <span class="mono">FAILURE</span> if <em>no valid value is found</em>, whereas unrequired properties will only result in a <span class="mono">WARNING</span>.
+			The <span class="mono">strict</span> attribute, applied to the root element of the mapping file, determines the default value for
+			the <span class="mono">required</span> attribute on all properties.
+		</p>
+
+		<p>
+			The expression '<em>no valid value is found</em>' is key to understanding how statuses are assigned. The following table shows
+			how different scenarios map to different statuses, most scenarios apply equally to graph, resource and property queries:
+		</p>
+
+		<table border="1px">
+			<tr>
+				<th>Scenario</th>
+				<th>Status (<span class="mono">required=true</span>)</th>
+				<th>Status (<span class="mono">required=false</span>)</th>
+			</tr>
+			<tr>
+				<td>The input file cannot be read</td>
+				<td><span class="mono">ERROR</span></td>
+				<td><span class="mono">ERROR</span></td>
+			</tr>
+			<tr>
+				<td>The query syntax is invalid</td>
+				<td><span class="mono">FAILURE</span></td>
+				<td><span class="mono">FAILURE</span></td>
+			</tr>
+			<tr>
+				<td>The query results in no values</td>
+				<td><span class="mono">FAILURE</span></td>
+				<td><span class="mono">ADVICE</span></td>
+			</tr>
+			<tr>
+				<td>The query results in one value</td>
+				<td><span class="mono">SUCCESS*</span></td>
+				<td><span class="mono">SUCCESS*</span></td>
+			</tr>
+			<tr>
+				<td>The query results in multiple values</td>
+				<td><span class="mono">SUCCESS*</span></td>
+				<td><span class="mono">SUCCESS*</span></td>
+			</tr>
+			<tr>
+				<td>The query results in multiple values, only one of which is a valid URI (<span class="mono">assuming resource=true</span>)</td>
+				<td><span class="mono">WARNING</span> (for each URI conversion failure) and <span class="mono">SUCCESS*</span></td>
+				<td><span class="mono">WARNING</span> (for each URI conversion failure) and <span class="mono">SUCCESS*</span></td>
+			</tr>
+			<tr>
+				<td>The query results in multiple values, none of which is a valid URI (<span class="mono">assuming resource=true</span>)</td>
+				<td><span class="mono">WARNING</span> (for each URI conversion failure) and <span class="mono">FAILURE</span></td>
+				<td><span class="mono">WARNING</span> (for each URI conversion failure) and <span class="mono">ADVICE</span></td>
+			</tr>
+			<tr>
+				<td>The query results in multiple values, but all fail the validation regular expression</td>
+				<td><span class="mono">WARNING</span> (for each regex mismatch) and <span class="mono">FAILURE</span></td>
+				<td><span class="mono">WARNING</span> (for each regex mismatch) and <span class="mono">ADVICE</span></td>
+			</tr>
+		</table>
+
+		<p>
+			<em>*<span class="mono">SUCCESS</span> status is used only to indicate a successfully created resource, not for every successful query</em>
+		</p>
+	</div>
+	<div class="section">
+		<a name="xpath"/>
+		<h2>XPath query language</h3>
+
+		<p>
+			The XPath engine used by Tripliser is the Saxon-HE library which provides support for XPath 2.0.
+			When using XPath as the query language, the default behaviour, certain rules apply to how the context of the query affects its execution.
+			These are outined in the following sections.
+		</p>
+	</div>
+	<div class="section">
+		<a name="nodeinherit"/>
+		<h3>Context node inheritance</h4>
+
+		<p>
+			If a query returns one or multiple <em>node</em> results, each node
+			is passed down the graph-&gt;resource-&gt;property hierarchy and used as context for the next. For example,
+			assuming the source XML:
+		</p>
+
+		<textarea name="code" class="xml:nogutter" cols="60">
+			<?xml version="1.0" encoding="UTF-8"?>
+			<root>
+				<things>
+					<thing>
+						<value>A</value>
+					</thing>
+					<thing>
+						<value>B</value>
+					</thing>
+				</things>
+			</root>
+		</textarea>
+
+		<p>
+			If a resource uses the XPath query:
+		</p>
+
+		<textarea name="code" class="xml:nogutter:nocontrols" cols="60">
+			//root/things/thing
+		</textarea>
+
+		<p>
+			Each 'thing' element will be passed as context to the properties, allowing a property to define a relative
+			XPath query:
+		</p>
+
+		<textarea name="code" class="xml:nogutter:nocontrols" cols="60">
+			value
+		</textarea>
+	</div>
+	<div class="section">
+		<a name="resetcontext"/>
+		<h3>Resetting context</h4>
+
+		<p>
+			XPath allows the context to be reset by using the '//' prefix. This does not circumvent the multiplicity
+			of a query result, but allows for aboslute references.
+		</p>
+
+		<p>
+			Another alternative is to switch document using the <span class="mono">input</span> attribute. Once the input
+			document has been changed, the context node is ignored.
+		</p>
+	</div>
+	<div class="section">
+		<a name="xpathfunc"/>
+		<h3>Saxon XPath Function Definitions</h4>
+
+		<p>
+			When creating a <span class="mono">TripliserFactory</span>, Saxon XPath functions can be supplied for use in the XPaths of the mapping file. These functions need to
+			extend the <a class="mono" href="http://www.saxonica.com/documentation/javadoc/net/sf/saxon/lib/ExtensionFunctionDefinition.html">ExtensionFunctionDefinition</a> class.
+		</p>
+
+		<p>
+			These functions can be added via this method:
+		</p>
+
+		<textarea name="code" class="java:nogutter:nocontrols" cols="60">
+			addFunctions(Set<ExtensionFunctionDefinition> functions)
+		</textarea>
+
+		<p>
+			Below is an example function to reverse a String:
+		</p>
+
+		<textarea name="code" class="java:nogutter" cols="60">
+			import org.apache.commons.lang.StringUtils;
+
+			import net.sf.saxon.expr.XPathContext;
+			import net.sf.saxon.lib.ExtensionFunctionCall;
+			import net.sf.saxon.lib.ExtensionFunctionDefinition;
+			import net.sf.saxon.om.SequenceIterator;
+			import net.sf.saxon.om.StructuredQName;
+			import net.sf.saxon.trans.XPathException;
+			import net.sf.saxon.tree.iter.SingletonIterator;
+			import net.sf.saxon.value.SequenceType;
+			import net.sf.saxon.value.StringValue;
+
+			public class Reverse extends ExtensionFunctionDefinition {
+
+				@Override
+				public ExtensionFunctionCall makeCallExpression() {
+					return new ExtensionFunctionCall() {
+
+						@Override
+						public SequenceIterator call(SequenceIterator[] arguments, XPathContext xPathContext)
+								throws XPathException {
+							String value = arguments[0].next().getStringValue();
+							return SingletonIterator.makeIterator(new StringValue(StringUtils.reverse(value)));
+						}
+					};
+				}
+
+				@Override
+				public SequenceType getResultType(SequenceType[] suppliedArguments) {
+					return SequenceType.SINGLE_STRING;
+				}
+
+				@Override
+				public StructuredQName getFunctionQName() {
+					return new StructuredQName("myFunc", "http://my-site.com/functions", "reverse");
+				}
+
+				@Override
+				public SequenceType[] getArgumentTypes() {
+					return new SequenceType[] {SequenceType.SINGLE_STRING};
+				}
+
+			}
+		</textarea>
+
+		<p>
+			Once installed, the function can be used in the mapping file as follows:
+		</p>
+
+		<textarea name="code" class="xml:nogutter" cols="60">
+			<namespace prefix="myFunc" url="http://my-site.com/functions" />
+			...
+			<property name="universe:reverseName" query="myFunc:reverse(name)" />
+		</textarea>
+	</div>
+	<div class="section">
+		<p>
+			Copyright (C) 2010, 2011 by David Rogers
+		</p>
+	</div>
+	<!-- Syntax highlighter configuration -->
+
+	<link type="text/css" rel="stylesheet" href="css/SyntaxHighlighter.css"></link>
+	<script language="javascript" src="js/shCore.js"></script>
+	<script language="javascript" src="js/shBrushXml.js"></script>
+	<script language="javascript" src="js/shBrushJava.js"></script>
+	<script language="javascript" src="js/shBrushPlain.js"></script>
+	<script language="javascript">
+	dp.SyntaxHighlighter.HighlightAll('code');
+	</script>
+
+</body>
+</html>
