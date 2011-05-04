@@ -17,9 +17,14 @@ It is designed as an alternative to XSLT conversion, providing the following adv
 * **Extensible** - custom functions, flexible API</li>
 * **Efficient** - facilities for processing data in large volumes with minimal memory usage
 
-As an introductory explanation of how tripliser works, here is a practical example.
+# Documentation
+
+[User Guide](User Guide)
 
 ## Example
+
+As an introductory explanation of how Tripliser works, here is a practical example.
+
 ### Premise
 
 You have an XML file containing data, which you wish to express in RDF:
