@@ -25,6 +25,7 @@ As an introductory explanation of how tripliser works, here is a practical examp
 You have an XML file containing data, which you wish to express in RDF:
 
 _Source XML file (universe.xml)_
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <universe-objects>
@@ -94,6 +95,7 @@ triplise universe.xml universe-mapping.xml
 This produces the following RDF file:
 
 _RDF output (universe.xml.rdf)_
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
