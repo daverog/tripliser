@@ -1,0 +1,16 @@
+body { font-family: Verdana, sans-serif; font-size: 0.8em; }
+table { font-size: 1em; }
+
+h1 { font-size: 250%; }
+h2 { font-size: 200%; }
+h3 { font-size: 150%; }
+h4 { font-size: 100%; }
+
+.mono { font-family: Courier, monospaced; }
+.strong { font-weight: bold; }
+
+.section { width: 100%; display: block; border-top: 1px dashed #444444; padding-bottom: 30px; }
+
+.mini { font-size: 70%; }
+
+.big { font-size: 200%; font-weight: bold; }
