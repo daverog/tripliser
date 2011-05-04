@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/query/saxon
+END
+XdmNodeAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/query/saxon/XdmNodeAdapter.java
+END
+DefaultNamespaceExtractor.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/query/saxon/DefaultNamespaceExtractor.java
+END
+XdmAtomicValueAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/query/saxon/XdmAtomicValueAdapter.java
+END
+SaxonXPathQueryableDocument.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/query/saxon/SaxonXPathQueryableDocument.java
+END

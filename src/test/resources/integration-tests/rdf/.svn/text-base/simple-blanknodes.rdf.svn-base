@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:simple="http://bbc.co.uk/simple/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/" > 
+  <rdf:Description rdf:nodeID="A1">
+    <simple:b>B</simple:b>
+    <simple:a>A</simple:a>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <simple:thing rdf:nodeID="A1"/>
+    <simple:thing rdf:nodeID="A2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://bbc.co.uk/thing/simple-thing">
+    <simple:things rdf:nodeID="A0"/>
+    <rdf:type rdf:resource="http://bbc.co.uk/simple/Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <simple:b>D</simple:b>
+    <simple:a>C</simple:a>
+  </rdf:Description>
+</rdf:RDF>

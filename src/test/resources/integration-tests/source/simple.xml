@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simple xmlns="http://bbc.co.uk/simple/" >
+  <id>simple-thing</id>
+  <name>Test Name</name>
+  <sub><subsub>Sub Sub</subsub></sub>
+  <items>
+  	<item><a>A</a><b>B</b></item>
+  	<item><a>C</a><b>D</b></item>
+  </items>
+  <entities>&#39;&#38;&#169;</entities>
+</simple>

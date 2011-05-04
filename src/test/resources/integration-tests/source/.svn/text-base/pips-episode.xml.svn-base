@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<?xml-stylesheet type="text/xsl" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/xsl/pips.xsl"?> 
+<pips xmlns="http://ns.webservices.bbc.co.uk/2006/02/pips" xmlns:pips-meta="http://ns.webservices.bbc.co.uk/2006/02/pips-meta" xmlns:xsd="http://www.w3.org/2001/XMLSchema-datatypes" release="86.4"> 
+  <episode revision="1" pid="b007bpw3" embargoed="false" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/episode/pid.b007bpw3/" last_modified="2010-11-27T04:52:56" last_modified_supplier="rbm"> 
+    <partner> 
+      <link rel="pips-meta:partner" pid="s0000001" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/partner/pid.s0000001/"/> 
+    </partner> 
+    <crid uri="crid://bbc.co.uk/b/6783578"/> 
+    <ids> 
+      <id type="crid" authority="bds">crid://bbc.co.uk/b/6783578</id> 
+      <id type="pid" authority="pips">b007bpw3</id> 
+    </ids> 
+    <member_of> 
+      <link rel="pips-meta:series" index="5" pid="b00k2px1" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/series/pid.b00k2px1/"/> 
+    </member_of> 
+    <member_of_brand> 
+      <link rel="pips-meta:brand" pid="b007tlxv" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/brand/pid.b007tlxv/"/> 
+    </member_of_brand> 
+    <master_brand> 
+      <link rel="pips-meta:master_brand" mid="bbc_two" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/master_brand/mid.bbc_two/"/> 
+    </master_brand> 
+    <title>Boots, Boots, Boots</title> 
+    <containers_title>Dad's Army: Series 5</containers_title> 
+    <presentation_title>Episode 5</presentation_title> 
+    <uri/> 
+    <synopses> 
+      <synopsis length="short">The men are instructed in the three Fs.</synopsis> 
+      <synopsis length="medium">Classic sitcom about the Home Guard unit of Walmington-on-Sea. The men are instructed in the three Fs.</synopsis> 
+      <synopsis length="long">Classic sitcom about the Home Guard unit of Walmington-on-Sea. 
+
+The men are instructed in the three Fs. The most important item in the infantryman's equipment is his feet, and Captain Mainwaring is determined that all of his men will be well shod with hardy battle-worthy feet. To this end, he starts a foot-hardening programme.</synopsis> 
+    </synopses> 
+    <languages> 
+      <language>EN</language> 
+    </languages> 
+    <genres/> 
+    <formats/> 
+    <classifications/> 
+    <media_type value="audio_video"/> 
+    <filename_template/> 
+    <links> 
+      <link rel="pips-meta:broadcast-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/episode/pid.b007bpw3/broadcasts/"/> 
+      <link rel="pips-meta:availability_trigger-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/episode/pid.b007bpw3/availability_triggers/"/> 
+      <link rel="pips-meta:mixed-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/episode/pid.b007bpw3/descendants/"/> 
+      <link rel="pips-meta:mixed-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/episode/pid.b007bpw3/siblings/"/> 
+      <link rel="pips-meta:clip-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/episode/pid.b007bpw3/children/clips/"/> 
+      <link rel="pips-meta:clip-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/episode/pid.b007bpw3/descendants/clips/"/> 
+      <link rel="pips-meta:version-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/episode/pid.b007bpw3/versions/"/> 
+      <link rel="pips-meta:membership-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/episode/pid.b007bpw3/member_in/"/> 
+      <link rel="pips-meta:related_link-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/episode/pid.b007bpw3/related_links/"/> 
+      <link rel="pips-meta:promotion-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/episode/pid.b007bpw3/promotions/"/> 
+      <link rel="pips-meta:tagging-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/episode/pid.b007bpw3/taggings/"/> 
+      <link rel="pips-meta:relationship-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/episode/pid.b007bpw3/relationships/"/> 
+      <link rel="pips-meta:contribution-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/episode/pid.b007bpw3/contributions/"/> 
+      <link rel="pips-meta:change-resultset" href="http://nm-stg-pipsv3.bbc.redbeemedia.net:4040/api/v1/episode/pid.b007bpw3/changes/"/> 
+    </links> 
+  </episode> 
+</pips> 

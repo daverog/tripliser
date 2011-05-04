@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:as="http://atomserver.org/namespaces/1.0/">
+<id>/electron/atom/v1/unittest/scientists/boas.xml</id>
+<title type="text"> Entry: scientists boas</title>
+<author>
+<name>AtomServer APP Service</name>
+</author>
+<link href="/electron/atom/v1/unittest/scientists/boas.xml" rel="self"/>
+<link href="/electron/atom/v1/unittest/scientists/boas.xml/1" rel="edit"/>
+<as:entryId>boas</as:entryId>
+<as:updateIndex>5</as:updateIndex>
+<as:revision>0</as:revision>
+<updated>2010-03-30T16:46:20.000Z</updated>
+<published>2010-03-30T16:46:20.000Z</published>
+<content type="application/xml">
+<scientist>
+<name>Franz Boas</name>
+<subjects><subject>anthropology</subject><subject>ethnology</subject></subjects>
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/6/62/FranzBoas.jpg/200px-FranzBoas.jpg"/>
+<synopsis source="http://en.wikipedia.org/wiki/Franz_Boas">
+Franz Boas (July 9, 1858 - December 21, 1942[2]) was a German American anthropologist and a pioneer of modern anthropology who has been called the "Father of American Anthropology"[3] and "the Father of Modern Anthropology." Like many such pioneers, he trained in other disciplines; he received his doctorate in physics, and did post-doctoral work in geography. He is famed for applying the scientific method to the study of human cultures and societies, a field which was previously based on the formulation of grand theories around anecdotal knowledge.[4]
+Boas once summed up his approach to anthropology and folklore by saying: "In the course of time I became convinced that a materialistic point of view, for a physicist a very real one, was untenable. This gave me a new point of view and I recognized the importance of studying the interaction between the organic and inorganic, above all the relaotion between the life of a people and their physical environment."[5]
+</synopsis>
+</scientist>
+</content>
+</entry>

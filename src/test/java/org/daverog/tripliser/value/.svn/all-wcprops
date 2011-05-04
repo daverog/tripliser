@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/test/java/org/daverog/tripliser/value
+END
+ValueGeneratorTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/test/java/org/daverog/tripliser/value/ValueGeneratorTest.java
+END
+ItemToStringConverterTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/test/java/org/daverog/tripliser/value/ItemToStringConverterTest.java
+END

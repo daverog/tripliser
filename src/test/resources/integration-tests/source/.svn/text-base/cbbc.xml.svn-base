@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom" xmlns:as="http://atomserver.org/namespaces/1.0/">
+  <id>/electron/atom/v1/cbbc/brand/tracybeaker.xml</id>
+  <title type="text"> Entry: brand tracybeaker</title>
+  <author>
+    <name>AtomServer APP Service</name>
+  </author>
+  <link href="/electron/atom/v1/cbbc/brand/tracybeaker.xml" rel="self"/>
+  <link href="/electron/atom/v1/cbbc/brand/tracybeaker.xml/1" rel="edit"/>
+  <as:entryId>tracybeaker</as:entryId>
+  <as:updateIndex>1383</as:updateIndex>
+  <as:revision>0</as:revision>
+  <updated>2010-09-21T12:06:34.000Z</updated>
+  <published>2010-09-21T12:06:34.000Z</published>
+  <content type="application/xml">
+    <cbbc:cbbc xmlns:cbbc="https://confluence.dev.bbc.co.uk/display/cbbcrebuild/Schemas" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:alf="http://www.alfresco.org" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:chiba="http://chiba.sourceforge.net/xforms" xmlns:xf="http://www.w3.org/2002/xforms" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <cbbc:brand>
+        <cbbc:name_id>thestoryoftracybeaker</cbbc:name_id>
+        <cbbc:bespoke_url xsi:nil="false">http://www.bbc.co.uk/cbbc/tracybeaker/</cbbc:bespoke_url>
+        <cbbc:title>The Story of Tracy Beaker</cbbc:title>
+        <cbbc:description>Drama about a young girl growing up in a childrens' home
+</cbbc:description>
+        <cbbc:seo>
+          <cbbc:meta_title>The Story of Tracy Beaker</cbbc:meta_title>
+          <cbbc:meta_description>Drama about a young girl growing up in a childrens' home</cbbc:meta_description>
+          <cbbc:meta_keywords>Tracy Beaker, Jacqueline Wilson's book, Tracy baker, </cbbc:meta_keywords>
+        </cbbc:seo>
+        <cbbc:skin>cbbcdefault</cbbc:skin>
+        <cbbc:parbrand xsi:nil="false">thestoryoftracybeaker</cbbc:parbrand>
+        <cbbc:subbrands/>
+        <cbbc:relbrands/>
+        <cbbc:programmes>
+          <cbbc:programme>b006mh1n</cbbc:programme>
+        </cbbc:programmes>
+        <cbbc:stars/>
+        <cbbc:date>
+          <cbbc:published>2010-07-26T17:01:00Z</cbbc:published>
+        </cbbc:date>
+        <cbbc:rights>
+          <cbbc:expiry xsi:nil="false">2020-07-27T17:01:00Z</cbbc:expiry>
+          <cbbc:holder xsi:nil="false">CBBC</cbbc:holder>
+        </cbbc:rights>
+        <cbbc:owner xsi:nil="false">Jacqueline Wilson</cbbc:owner>
+        <cbbc:geo xsi:nil="true">false</cbbc:geo>
+        <cbbc:messageboardID>F2697955</cbbc:messageboardID>
+      </cbbc:brand>
+    </cbbc:cbbc>
+  </content>
+</entry>

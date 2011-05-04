@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf-mapping>
+	<constants>
+		<constant name="iSiteUrl" value="http://www.bbc.co.uk/iSite" />
+	</constants>
+	<namespaces>
+		<namespace prefix="atom" url="http://www.w3.org/2005/Atom" />
+		<namespace prefix="foaf" url="http://xmlns.com/foaf/0.1/" />
+		<namespace prefix="bio" url="http://purl.org/vocab/bio/0.1/" />
+		<namespace prefix="cbbc" url="https://confluence.dev.bbc.co.uk/display/cbbcrebuild/Schemas" default="true" />
+	</namespaces>
+	<graph query="//atom:entry/atom:content">
+		<resource query="cbbc/brand">
+			<about prepend="${iSiteUrl}" append="#brand" query="../../../atom:id" />
+			<properties>
+				<property name="rdf:type" resource="true" value="cbbc:CBBCBrand" />
+				<property name="foaf:name" query="name_id" />
+				<property name="bio:biography" query="description" />
+			</properties>
+		</resource>
+		<resource query="cbbc/download">
+			<about prepend="${iSiteUrl}" append="#download" query="../../../atom:id" />
+			<properties>
+				<property name="rdf:type" resource="true" value="cbbc:CBBCBrand" />
+				<property name="foaf:name" query="name_id" />
+				<property name="bio:biography" query="description" />
+			</properties>
+		</resource>
+	</graph>
+</rdf-mapping>

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/mapping/model
+END
+GraphMapping.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/mapping/model/GraphMapping.java
+END
+NamespaceProperty.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/mapping/model/NamespaceProperty.java
+END
+ResourceMapping.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/mapping/model/ResourceMapping.java
+END
+Mapping.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/mapping/model/Mapping.java
+END
+ValueMapping.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/mapping/model/ValueMapping.java
+END
+Namespace.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/mapping/model/Namespace.java
+END
+Tag.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/mapping/model/Tag.java
+END
+PropertyMapping.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/mapping/model/PropertyMapping.java
+END
+GenericMapping.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/mapping/model/GenericMapping.java
+END
+Constant.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/mapping/model/Constant.java
+END

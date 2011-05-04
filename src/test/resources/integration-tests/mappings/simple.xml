@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf-mapping>
+	<namespaces>
+		<namespace prefix="simple" url="http://bbc.co.uk/simple/" default="true"/>
+		<namespace prefix="foaf" url="http://xmlns.com/foaf/0.1/" />
+	</namespaces>
+	<graph>
+		<resource query="//simple">
+			<about prepend="http://bbc.co.uk/thing/" query="id" />
+			<properties>
+				<property name="rdf:type" resource="true" value="simple:Thing" />
+				<property name="foaf:name" query="name" />
+			</properties>
+		</resource>
+	</graph>
+</rdf-mapping>

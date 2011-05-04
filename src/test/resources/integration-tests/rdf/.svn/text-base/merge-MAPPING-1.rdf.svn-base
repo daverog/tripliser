@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:foaf="http://xmlns.com/foaf/0.1/">
+	<rdf:Description rdf:about="http://bbc.co.uk/food/1">
+		<rdf:type rdf:resource="http://bbc.co.uk/food/Apple"/>
+		<foaf:name>Braeburn</foaf:name>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://bbc.co.uk/food/2">
+		<rdf:type rdf:resource="http://bbc.co.uk/food/Apple"/>
+		<foaf:name>Cox</foaf:name>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://bbc.co.uk/food/3">
+		<rdf:type rdf:resource="http://bbc.co.uk/food/Apple"/>
+		<foaf:name>Pink Lady</foaf:name>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://bbc.co.uk/food/4">
+		<rdf:type rdf:resource="http://bbc.co.uk/food/Apple"/>
+		<foaf:name>Bramley</foaf:name>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://bbc.co.uk/food/5">
+		<rdf:type rdf:resource="http://bbc.co.uk/food/Potato"/>
+		<foaf:name>King Edward</foaf:name>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://bbc.co.uk/food/6">
+		<rdf:type rdf:resource="http://bbc.co.uk/food/Potato"/>
+		<foaf:name>Charlotte</foaf:name>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://bbc.co.uk/food/7">
+		<rdf:type rdf:resource="http://bbc.co.uk/food/Apple"/>
+		<foaf:name>Golden Delicious</foaf:name>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://bbc.co.uk/food/8">
+		<rdf:type rdf:resource="http://bbc.co.uk/food/Apple"/>
+		<foaf:name>Granny Smith</foaf:name>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://bbc.co.uk/food/9">
+		<rdf:type rdf:resource="http://bbc.co.uk/food/Potato"/>
+		<foaf:name>Marfona</foaf:name>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://bbc.co.uk/food/10">
+		<rdf:type rdf:resource="http://bbc.co.uk/food/Potato"/>
+		<foaf:name>Nicola</foaf:name>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://bbc.co.uk/food/11">
+		<rdf:type rdf:resource="http://bbc.co.uk/food/Potato"/>
+		<foaf:name>Nadine</foaf:name>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://bbc.co.uk/food/12">
+		<rdf:type rdf:resource="http://bbc.co.uk/food/Potato"/>
+		<foaf:name>Saxon</foaf:name>
+	</rdf:Description>
+	<rdf:Description rdf:about="http://bbc.co.uk/food/13">
+		<rdf:type rdf:resource="http://bbc.co.uk/food/Cabbage"/>
+		<foaf:name>Savoy</foaf:name>
+	</rdf:Description>
+</rdf:RDF>

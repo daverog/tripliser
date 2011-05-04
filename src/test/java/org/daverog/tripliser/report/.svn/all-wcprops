@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/test/java/org/daverog/tripliser/report
+END
+CompositeReportTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/test/java/org/daverog/tripliser/report/CompositeReportTest.java
+END
+DefaultReporterFactoryTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/test/java/org/daverog/tripliser/report/DefaultReporterFactoryTest.java
+END
+MessageRecordingTripliserReporterTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/test/java/org/daverog/tripliser/report/MessageRecordingTripliserReporterTest.java
+END

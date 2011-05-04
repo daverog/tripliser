@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/query
+END
+SimpleStringValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/query/SimpleStringValue.java
+END
+QueryService.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/query/QueryService.java
+END
+QuerySpecification.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/query/QuerySpecification.java
+END
+QueryException.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/query/QueryException.java
+END
+AtomicValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/query/AtomicValue.java
+END
+Item.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/query/Item.java
+END
+Node.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/query/Node.java
+END
+Queryable.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/query/Queryable.java
+END
+QueryableInputFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/!svn/ver/482435/playground/drogers/tripliser/trunk/src/main/java/org/daverog/tripliser/query/QueryableInputFactory.java
+END

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simple xmlns="http://bbc.co.uk/simple/">
+  <id>simple-thing</id>
+  <name>Test Name</name>
+  <diff:extra xmlns:diff="http://bbc.co.uk/diff">Hello</diff:extra>
+</simple>

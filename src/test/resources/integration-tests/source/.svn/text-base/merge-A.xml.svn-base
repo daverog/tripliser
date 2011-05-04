@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<food xmlns="http://bbc.co.uk/food/" >
+	<fruit>
+		<apple>
+			<id>1</id>
+			<name>Braeburn</name>
+		</apple>
+		<apple>
+			<id>2</id>
+			<name>Cox</name>
+		</apple>
+	</fruit>
+	<fruit>
+		<apple>
+			<id>3</id>
+			<name>Pink Lady</name>
+		</apple>
+		<apple>
+			<id>4</id>
+			<name>Bramley</name>
+		</apple>
+	</fruit>
+	<vegetables>
+		<potato>
+			<id>5</id>
+			<name>King Edward</name>
+		</potato>
+		<potato>
+			<id>6</id>
+			<name>Charlotte</name>
+		</potato>
+	</vegetables>
+</food>
