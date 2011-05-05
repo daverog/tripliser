@@ -18,3 +18,5 @@ h4 { font-size: 100%; }
 #menu { display: block; float: left; background-color: #EEEEEE; border-top: black solid 1px;  border-bottom: black solid 1px; padding: 5px; width: 98%; margin: 0px; margin-bottom: 10px; }
 #menu div { display: block; float: left; padding: 5px; font-weight: bold; }
 #content { clear: left; }
+
+pre { font-size: 150%; }
