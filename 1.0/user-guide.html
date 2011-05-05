@@ -139,12 +139,14 @@ title: Tripliser User Guide
 	<div class="section">
 		<a name="install"/>
 		<h3>Installation</h3>
+
+		<p>The only currently available version is "1.0", replace [version] with this value in the command line examples below.</p>
 	</div>
 	<div class="section">
 		<a name="clidownload"/>
 		<h4>Download Jar</h4>
 		<em>requires Java 1.6</em>
-<pre>wget https://github.com/downloads/daverog/tripliser/tripliser-1.0-jar-with-dependencies.jar
+<pre>wget https://github.com/downloads/daverog/tripliser/tripliser-[version]-jar-with-dependencies.jar
 wget https://github.com/daverog/tripliser/raw/master/src/main/sh/triplise
 chmod u=r+x triplise
 ./triplise [input] [mapping]</pre>
@@ -163,7 +165,7 @@ git clone git://github.com/daverog/tripliser
 cd tripliser
 mvn assembly:assembly -DdescriptorId=jar-with-dependencies
 cp src/main/sh/triplise [installation directory]
-cp target/tripliser-1.0-jar-with-dependencies.jar  [installation directory]
+cp target/tripliser-[version]-jar-with-dependencies.jar  [installation directory]
 cd [installation directory]
 chmod u=r+x triplise
 ./triplise [input] [mapping]</pre>
@@ -236,7 +238,7 @@ mvn install:install-file -Dfile=tripliser-[version].jar -DpomFile=tripliser-[ver
 		<textarea name="code" class="xml:nogutter" cols="60"><dependency>
 	<groupId>org.daverog.tripliser</groupId>
 	<artifactId>tripliser</artifactId>
-	<version>1.0</version>
+	<version>[version]</version>
 </dependency></textarea>
 	</div>
 	<div class="section">
