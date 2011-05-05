@@ -19,4 +19,4 @@ h4 { font-size: 100%; }
 #menu div { display: block; float: left; padding: 5px; font-weight: bold; }
 #content { clear: left; }
 
-pre { font-size: 150%; padding: 10px; background-color: #FFFFCC }
+pre { font-size: 150%; padding: 10px; background-color: #FFFFCC; border: black dotted 1px; }

@@ -38,12 +38,12 @@ chmod u=r+x triplise
 ./triplise [input] [mapping]
 </pre>
 		<p>
-			To run a quick example, using the code shown below, run the following:
+			To run a quick example, using the code shown in the example, run the following:
 		</p>
-<pre>wget https://github.com/downloads/daverog/tripliser/tripliser-1.0-jar-with-dependencies.jar
-wget https://github.com/daverog/tripliser/raw/master/src/main/sh/triplise
-chmod u=r+x triplise
-./triplise [input] [mapping]
+<pre>wget -O universe-mapping.xml https://github.com/daverog/tripliser/raw/master/src/test/resources/examples/mappings/universe.xml
+wget https://github.com/daverog/tripliser/raw/master/src/test/resources/examples/source/universe.xml
+./triplise universe.xml universe-mapping.xml
+cat universe.xml.rdf
 </pre>
 	</div>
 	<div class="section">
