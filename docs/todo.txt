@@ -1,12 +1,12 @@
 Version 1.0
 
 Publishing
-	Checkin triplise script
-	Test install instructions
+	Rija Test install instructions?
 		Quick start
 		Maven
 		CLI - from source
 		CLI - from Jar
+	Final checkin of docs
 Blogpost
 Tweet
 

@@ -51,7 +51,7 @@ public class Triplise {
 				.withArgName("filename")
 				.create('o'));
 		OPTIONS.addOption(OptionBuilder
-				.withDescription("The mime-type to use for the output (text/rdf+n3, application/x-turtle, text/plain, application/rdf+xml+abbr, application/rdf+xml")
+				.withDescription("The mime-type to use for the output (text/rdf+n3, application/x-turtle, text/plain, application/rdf+xml+abbr, application/rdf+xml)")
 				.withLongOpt("mime-type")
 				.hasArg()
 				.withArgName("mimetype")
