@@ -1,21 +1,29 @@
 <html>
 <head>
 	<title>{{ page.title }}</title>
-	<link type="text/css" rel="stylesheet" href="css/tripliser.css"></link>
+	<link type="text/css" rel="stylesheet" href="../css/tripliser.css"></link>
 	<meta name="keywords" content="xml2rdf, xmltordf, GRDDL"/>
 </head>
 <body>
-	<h1>{{ page.title }}</h1>
-	<p class="big">
-		&lt; <a href="index.html">Back to Homepage</a>
-	</p>
+	<div id="menu">
+		<div><a href="http://daverog.github.com/tripliser/index.html">Homepage</a></div>
+		<div>|</div>
+		<div><a href="http://daverog.github.com/tripliser/1.0/user-guide.html">Version 1.0 - User Guide</a></div>
+		<div>|</div>
+		<div><a href="https://github.com/daverog/tripliser">GitHub Home</a></div>
+		<div>|</div>
+		<div><a href="http://daverog.github.com/tripliser/license.html">License</a></div>
+	</div>
+	<div id="content">
+		<h1>{{ page.title }}</h1>
 
-{{ content }}
+		{{ content }}
 
-	<div class="section">
-		<p>
-			Copyright (C) 2010, 2011 by David Rogers
-		</p>
+		<div class="section">
+			<p>
+				Copyright (C) 2010, 2011 by David Rogers
+			</p>
+		</div>
 	</div>
 	<!-- Syntax highlighter configuration -->
 

@@ -14,3 +14,7 @@ h4 { font-size: 100%; }
 .mini { font-size: 70%; }
 
 .big { font-size: 200%; font-weight: bold; }
+
+#menu { display: block; float: left; background-color: #EEEEEE; border-top: black solid 1px;  border-bottom: black solid 1px; padding: 5px; width: 50%; margin: 0px; margin-bottom: 10px; }
+#menu div { display: block; float: left; padding: 5px; font-weight: bold; }
+#content { clear: left; }
