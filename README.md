@@ -1,6 +1,6 @@
-# Homepage & Documentation
+# Find out more
 
-[User Guide](http://daverog.github.com/tripliser)
+[Homepage & Documentation](http://daverog.github.com/tripliser)
 
 # What is Tripliser?
 
