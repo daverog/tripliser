@@ -143,7 +143,7 @@ title: Tripliser User Guide
 	<div class="section">
 		<a name="clidownload"/>
 		<h4>Download Jar</h4>
-
+		<em>requires Java 1.6</em>
 		<ol>
 			<li><span class="mono">wget https://github.com/downloads/daverog/tripliser/tripliser-1.0-jar-with-dependencies.jar</span></li>
 			<li><span class="mono">wget https://github.com/daverog/tripliser/raw/master/src/main/sh/triplise</span></li>
@@ -164,8 +164,9 @@ title: Tripliser User Guide
 		<h4>From source - Build Tripliser</h4>
 
 		<ol>
-			<li><span class="mono">cd [empty source directory]</span></li>
+			<li><span class="mono">cd [workspace directory]</span></li>
 			<li><span class="mono">git clone git://github.com/daverog/tripliser</span></li>
+			<li><span class="mono">cd tripliser</span></li>
 			<li><span class="mono">mvn assembly:assembly -DdescriptorId=jar-with-dependencies</span></li>
 			<li><span class="mono">cp src/main/sh/triplise [installation directory]</span></li>
 			<li><span class="mono">cp target/tripliser-1.0-jar-with-dependencies.jar  [installation directory]</span></li>
@@ -222,7 +223,7 @@ title: Tripliser User Guide
 		<p>Tripliser is principally designed as a Java library. As such, the functionality is richer than simply using the command line tool. </p>
 	</div>
 	<div class="section">
-		<a name="javausage"/>
+		<a name="maven"/>
 		<h3>Maven dependency</h3>
 
 		<p>
@@ -240,13 +241,11 @@ title: Tripliser User Guide
 			To use in your project, include the following dependency in your pom.xml file:
 		</p>
 
-		<textarea name="code" class="xml:nogutter" cols="60">
-			<dependency>
-               <groupId>org.daverog.tripliser</groupId>
-    		   <artifactId>tripliser</artifactId>
-               <version>1.0</version>
-           </dependency>
-		</textarea>
+		<textarea name="code" class="xml:nogutter" cols="60"><dependency>
+	<groupId>org.daverog.tripliser</groupId>
+	<artifactId>tripliser</artifactId>
+	<version>1.0</version>
+</dependency></textarea>
 	</div>
 	<div class="section">
 		<a name="javausage"/>
