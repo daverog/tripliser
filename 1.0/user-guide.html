@@ -144,36 +144,29 @@ title: Tripliser User Guide
 		<a name="clidownload"/>
 		<h4>Download Jar</h4>
 		<em>requires Java 1.6</em>
-		<ol>
-			<li><span class="mono">wget https://github.com/downloads/daverog/tripliser/tripliser-1.0-jar-with-dependencies.jar</span></li>
-			<li><span class="mono">wget https://github.com/daverog/tripliser/raw/master/src/main/sh/triplise</span></li>
-			<li><span class="mono">chmod u=r+x triplise</span></li>
-			<li><span class="mono">./triplise [input] [mapping]</span></li>
-		</ol>
+<pre>wget https://github.com/downloads/daverog/tripliser/tripliser-1.0-jar-with-dependencies.jar
+wget https://github.com/daverog/tripliser/raw/master/src/main/sh/triplise
+chmod u=r+x triplise
+./triplise [input] [mapping]</pre>
 	</div>
 	<div class="section">
 		<a name="clisource"/>
 		<h4>From source - Install Saxon into Maven Repository</h4>
-
-		<ol>
-			<li>Download Saxon-HE 9.3 <a href="http://saxon.sourceforge.net/#F9.3HE">from here</a></li>
-			<li><span class="mono">unzip saxonhe9-3[version]j.zip</span></li>
-			<li><span class="mono">mvn install:install-file -Dfile=saxon9he.jar -DgroupId=net.sf.saxon -DartifactId=saxon-he -Dversion=9.3 -Dpackaging=jar</span></li>
-		</ol>
+	<p>Download Saxon-HE 9.3 <a href="http://saxon.sourceforge.net/#F9.3HE">from here</a>. Next...</p>
+<pre>unzip saxonhe9-3[version]j.zip
+mvn install:install-file -Dfile=saxon9he.jar -DgroupId=net.sf.saxon -DartifactId=saxon-he -Dversion=9.3 -Dpackaging=jar</pre>
 
 		<h4>From source - Build Tripliser</h4>
 
-		<ol>
-			<li><span class="mono">cd [workspace directory]</span></li>
-			<li><span class="mono">git clone git://github.com/daverog/tripliser</span></li>
-			<li><span class="mono">cd tripliser</span></li>
-			<li><span class="mono">mvn assembly:assembly -DdescriptorId=jar-with-dependencies</span></li>
-			<li><span class="mono">cp src/main/sh/triplise [installation directory]</span></li>
-			<li><span class="mono">cp target/tripliser-1.0-jar-with-dependencies.jar  [installation directory]</span></li>
-			<li><span class="mono">cd [installation directory]</span></li>
-			<li><span class="mono">chmod u=r+x triplise</span></li>
-			<li><span class="mono">./triplise [input] [mapping]</span></li>
-		</ol>
+<pre>cd [workspace directory]
+git clone git://github.com/daverog/tripliser
+cd tripliser
+mvn assembly:assembly -DdescriptorId=jar-with-dependencies
+cp src/main/sh/triplise [installation directory]
+cp target/tripliser-1.0-jar-with-dependencies.jar  [installation directory]
+cd [installation directory]
+chmod u=r+x triplise
+./triplise [input] [mapping]</pre>
 	</div>
 	<div class="section">
 		<a name="usage"/>
@@ -231,10 +224,9 @@ title: Tripliser User Guide
 			Next, install the latest Tripliser library into your maven repository:
 		</p>
 
-		<ol>
-			<li><span class="mono">wget https://github.com/downloads/daverog/tripliser/pom.xml</span></li>
-			<li><span class="mono">wget https://github.com/downloads/daverog/tripliser/tripliser-[version].jar</span></li>
-			<li><span class="mono">mvn install:install-file -Dfile=tripliser-[version].jar -DpomFile=pom.xml</span></li>
+<pre>wget -O tripliser-[version].pom https://github.com/downloads/daverog/tripliser/pom.xml
+wget https://github.com/downloads/daverog/tripliser/tripliser-[version].jar
+mvn install:install-file -Dfile=tripliser-[version].jar -DpomFile=tripliser-[version].pom</pre>
 		</ol>
 
 		<p>
