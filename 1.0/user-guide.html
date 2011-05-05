@@ -21,8 +21,8 @@ title: Tripliser User Guide
 				<ul>
 					<li><a href="#install">Installation</a>
 						<ul>
-							<li><a href="#clisource">From Source</a></li>
 							<li><a href="#clidownload">Download Jar</a></li>
+							<li><a href="#clisource">From Source</a></li>
 						</ul>
 					</li>
 					<li><a href="#usage">Usage</a></li>
@@ -30,6 +30,7 @@ title: Tripliser User Guide
 			</li>
 			<li><a href="#java">Java</a>
 				<ul>
+					<li><a href="#maven">As Maven dependency</a></li>
 					<li><a href="#usage">Usage</a></li>
 					<li><a href="#functions">Supplying functions</a></li>
 					<li><a href="#triplegraphs">TripleGraphs</a>
@@ -138,30 +139,38 @@ title: Tripliser User Guide
 	<div class="section">
 		<a name="install"/>
 		<h3>Installation</h3>
-
-		<p>TODO: Once uploaded to github</p>
-	</div>
-	<div class="section">
-		<a name="clisource"/>
-		<h4>From source</h3>
-
-		<ol>
-			<li><em>Git instructions here</em></li>
-			<li><span class="mono">cd [source directory]</span></li>
-			<li><span class="mono">mvn assembly:assembly -DdescriptorId=jar-with-dependencies</span></li>
-			<li><span class="mono">cp src/main/sh/triplise [installation directory]</span></li>
-			<li><span class="mono">cp target/tripliser-1.0-jar-with-dependencies.jar  [installation directory]</span></li>
-			<li><span class="mono">cd [installation directory]</span></li>
-			<li><span class="mono">triplise [input] [mapping]</span></li>
-		</ol>
 	</div>
 	<div class="section">
 		<a name="clidownload"/>
 		<h4>Download Jar</h4>
 
 		<ol>
-			<li><span class="mono">wget ???TODO???</span></li>
-			<li><span class="mono">wget ???TODO???</span></li>
+			<li><span class="mono">wget https://github.com/downloads/daverog/tripliser/tripliser-1.0-jar-with-dependencies.jar</span></li>
+			<li><span class="mono">wget https://github.com/daverog/tripliser/raw/master/src/main/sh/triplise</span></li>
+			<li><span class="mono">chmod r+x triplise</span></li>
+			<li><span class="mono">triplise [input] [mapping]</span></li>
+		</ol>
+	</div>
+	<div class="section">
+		<a name="clisource"/>
+		<h4>From source - Install Saxon into Maven Repository</h4>
+
+		<ol>
+			<li>Download Saxon-HE 9.3 <a href="http://saxon.sourceforge.net/#F9.3HE">from here</a></li>
+			<li><span class="mono">unzip saxonhe9-3[version]j.zip</span></li>
+			<li><span class="mono">mvn install:install-file -Dfile=saxon9he.jar -DgroupId=net.sf.saxon -DartifactId=saxon-he -Dversion=9.3 -Dpackaging=jar</span></li>
+		</ol>
+
+		<h4>From source - Build Tripliser</h4>
+
+		<ol>
+			<li><span class="mono">cd [empty source directory]</span></li>
+			<li><span class="mono">git clone git://github.com/daverog/tripliser</span></li>
+			<li><span class="mono">mvn assembly:assembly -DdescriptorId=jar-with-dependencies</span></li>
+			<li><span class="mono">cp src/main/sh/triplise [installation directory]</span></li>
+			<li><span class="mono">cp target/tripliser-1.0-jar-with-dependencies.jar  [installation directory]</span></li>
+			<li><span class="mono">cd [installation directory]</span></li>
+			<li><span class="mono">chmod r+x triplise</span></li>
 			<li><span class="mono">triplise [input] [mapping]</span></li>
 		</ol>
 	</div>
@@ -211,6 +220,33 @@ title: Tripliser User Guide
 		<h2>Java</h2>
 
 		<p>Tripliser is principally designed as a Java library. As such, the functionality is richer than simply using the command line tool. </p>
+	</div>
+	<div class="section">
+		<a name="javausage"/>
+		<h3>Maven dependency</h3>
+
+		<p>
+			First follow the instructions in 'From source - Install Saxon into Maven Repository' to install Saxon-HE in your local Maven repo.
+			Next, install the latest Tripliser library into your maven repository:
+		</p>
+
+		<ol>
+			<li><span class="mono">wget https://github.com/downloads/daverog/tripliser/pom.xml</span></li>
+			<li><span class="mono">wget https://github.com/downloads/daverog/tripliser/tripliser-[version].jar</span></li>
+			<li><span class="mono">mvn install:install-file -Dfile=tripliser-[version].jar -DpomFile=pom.xml</span></li>
+		</ol>
+
+		<p>
+			To use in your project, include the following dependency in your pom.xml file:
+		</p>
+
+		<textarea name="code" class="xml:nogutter" cols="60">
+			<dependency>
+               <groupId>org.daverog.tripliser</groupId>
+    		   <artifactId>tripliser</artifactId>
+               <version>1.0</version>
+           </dependency>
+		</textarea>
 	</div>
 	<div class="section">
 		<a name="javausage"/>
