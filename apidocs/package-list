@@ -1,0 +1,14 @@
+org.daverog.tripliser
+org.daverog.tripliser.cli
+org.daverog.tripliser.exception
+org.daverog.tripliser.graphs
+org.daverog.tripliser.mapping
+org.daverog.tripliser.mapping.model
+org.daverog.tripliser.query
+org.daverog.tripliser.query.saxon
+org.daverog.tripliser.report
+org.daverog.tripliser.report.xml
+org.daverog.tripliser.triplisers
+org.daverog.tripliser.util
+org.daverog.tripliser.value
+org.daverog.tripliser.xml
