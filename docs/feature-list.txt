@@ -1,4 +1,0 @@
-Custom XPathFunctionResolver
-Multi-input file with named supporting inputs
-Built in functions (func:lower-case)
-Data-type format checking

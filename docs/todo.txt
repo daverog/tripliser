@@ -1,17 +1,12 @@
 Version 1.0
 
-Docs finalise -	Rija read-through
-Pre-publish
-	pom details
-	License
-Publish
-	Get on github
-	Readme?
-Post github publish
-	Command line tool - Installing
-	Tweak, if necessary, doc format
-	Finalise links in docs
-	Do links to javadoc?
+Publishing
+	Checkin triplise script
+	Test install instructions
+		Quick start
+		Maven
+		CLI - from source
+		CLI - from Jar
 Blogpost
 Tweet
 
