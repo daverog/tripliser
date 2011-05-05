@@ -1,0 +1,46 @@
+Version 1.0
+
+Docs finalise -	Rija read-through
+Pre-publish
+	pom details
+	License
+Publish
+	Get on github
+	Readme?
+Post github publish
+	Command line tool - Installing
+	Tweak, if necessary, doc format
+	Finalise links in docs
+	Do links to javadoc?
+Blogpost
+Tweet
+
+Version 1.0.1
+
+PropertyMappingTest
+
+Version 1.1...
+
+Max graph size (particularly for CLI + large CSV)
+Bag, seq & list!
+Implement alternative = true
+	Basic logic...
+		if alt=true
+			if value found for name="x"
+				ignore alternative
+			else
+				process alternative just like any mapping
+	Note: this means *order matters*
+Introduce 'report scope="x"' to reporting?
+Simplify addPropertiesForResourceAndMapping
+Some integration tests for XML reports?
+setLogger(Logger) ... (composite reporters)
+Convert DI to use Guice
+CSV as input format (psuedo XPath?)
+SQL as query language
+Parameters (injected 'constants')
+Prefix validation: seems to be hard, no libraries for doing it, spec is complicated:
+	http://www.w3.org/TR/REC-xml/#NT-NameStartChar
+Internal resource validity (resource must exist in generated graph)
+	internalResource="true"?
+Standalone mapping validation? XSD?
